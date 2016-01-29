@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-
-public class Game : MonoBehaviour
+public enum GameState
 {
-    [SerializeField]
-    private Game pouet;
+    Menu,
+    Game
+}
 
+public class GameStateMachine : StateMachine<GameState, AbstractGameState>
+{
 	// Use this for initialization
 	void Start () {
 	
