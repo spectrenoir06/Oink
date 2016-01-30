@@ -49,6 +49,11 @@ public class PingouinNavigation : MonoBehaviour
             jumpRequested = false;
             ia.notifytouchGround();
         }
+		if(collision.collider.tag == "Destroy_Zone")
+		{
+			Debug.Log("20cm de bite");
+			Destroy (this.gameObject);
+		}
     }
 
     private void FixedUpdate()

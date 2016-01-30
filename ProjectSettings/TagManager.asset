@@ -7,6 +7,7 @@ TagManager:
   - FishManager
   - Banquise
   - SoundsManager
+  - Destroy_Zone
   layers:
   - Default
   - TransparentFX

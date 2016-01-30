@@ -24,7 +24,6 @@ public class Pingouin : MonoBehaviour
             throwFish();
         }
     }
-
     void OnMouseDown()
     {
         navigation.jump();
@@ -34,5 +33,4 @@ public class Pingouin : MonoBehaviour
     {
         animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
         FishManager.Instance.createPrefabAtPosition(transform.position);
-    }
-}
+    }}
