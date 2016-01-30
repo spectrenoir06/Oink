@@ -19,4 +19,5 @@ public class Pingouin : MonoBehaviour
     {
         navigation.jump();
     }
+		
 }

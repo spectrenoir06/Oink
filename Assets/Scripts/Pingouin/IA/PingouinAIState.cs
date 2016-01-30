@@ -28,11 +28,27 @@ public class PingouinAIState : NPCAIState
 
     }
 
+	public void wait(float time){
+		//StartCoroutine(waitCoroutine(time));
+	}
+
+	private IEnumerable waitCoroutine(float time)
+	{
+		yield return new WaitForSeconds(time);
+		notifyEndWait();
+	}
+
+
     public void jump()
     {
         transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform);
         navigation.jump();
     }
+
+	public void notifyEndWait()
+	{
+		lua.call("onWaitEnd", this);
+	}
 
     public void notifytouchGround()
     {
