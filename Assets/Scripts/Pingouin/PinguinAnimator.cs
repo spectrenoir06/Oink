@@ -27,7 +27,6 @@ public class PinguinAnimator : MonoBehaviour {
   [SerializeField]
   private Animator animator;
 
-  [SerializeField]
   private StateAnimationPinguin currentState;
 
   // Use this for initialization
