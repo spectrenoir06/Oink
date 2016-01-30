@@ -5,3 +5,7 @@ import 'Assembly-CSharp'
 function enter(npc)
 	npc:startWalking()
 end
+
+function update(npc)
+
+end

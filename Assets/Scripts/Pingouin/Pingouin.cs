@@ -13,7 +13,7 @@ public class Pingouin : MonoBehaviour
     void Start ()
     {
         //transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, Vector3.right);
-        StartCoroutine(popFish());
+        //StartCoroutine(popFish());
     }
     
     IEnumerator popFish()
@@ -26,7 +26,8 @@ public class Pingouin : MonoBehaviour
     }
     void OnMouseDown()
     {
-        navigation.jump();
+        //navigation.jump();
+		throwFish();
     }
 
     void throwFish()
