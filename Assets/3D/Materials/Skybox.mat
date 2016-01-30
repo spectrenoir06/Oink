@@ -159,7 +159,7 @@ Material:
       data:
         first:
           name: _AtmosphereThickness
-        second: 0.69958663
+        second: 0.6045756
       data:
         first:
           name: _Parallax

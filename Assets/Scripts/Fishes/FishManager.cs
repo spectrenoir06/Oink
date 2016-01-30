@@ -46,6 +46,11 @@ public class FishManager : MonoBehaviour
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
         fishList.Add(newFish.GetComponent<Fish>());
+        Vector3 direction = GameObject.FindGameObjectWithTag("Banquise").transform.position - newFish.transform.position;
+        Debug.Log(direction);
+        direction.Normalize();
+        Debug.Log(direction);
+        newFish.GetComponent<Rigidbody>().velocity = direction * 5;
     }
 
     public Vector3 getClosestFishPosition(Vector3 origin)
