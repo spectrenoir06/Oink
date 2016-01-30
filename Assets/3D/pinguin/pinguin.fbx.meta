@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 312ca233de9db764fa651cc1f7d945bd
+timeCreated: 1454113032
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: "Bo\xEEte001"
+    100002: "Bo\xEEte002"
+    100004: "Bo\xEEte003"
+    100006: "Bo\xEEte004"
+    100008: "Bo\xEEte005"
+    100010: "Bo\xEEte006"
+    100012: //RootNode
+    100014: "Sph\xE8re001"
+    100016: "Sph\xE8re002"
+    100018: "Sph\xE8re003"
+    100020: armLeft
+    100022: armRight
+    100024: eyeLeft
+    100026: eyeRight
+    100028: feetLeft
+    100030: feetRight
+    100032: mouthDown
+    100034: mouthUp
+    400000: "Bo\xEEte001"
+    400002: "Bo\xEEte002"
+    400004: "Bo\xEEte003"
+    400006: "Bo\xEEte004"
+    400008: "Bo\xEEte005"
+    400010: "Bo\xEEte006"
+    400012: //RootNode
+    400014: "Sph\xE8re001"
+    400016: "Sph\xE8re002"
+    400018: "Sph\xE8re003"
+    400020: armLeft
+    400022: armRight
+    400024: eyeLeft
+    400026: eyeRight
+    400028: feetLeft
+    400030: feetRight
+    400032: mouthDown
+    400034: mouthUp
+    2300000: "Bo\xEEte001"
+    2300002: "Bo\xEEte002"
+    2300004: "Bo\xEEte003"
+    2300006: "Bo\xEEte004"
+    2300008: "Bo\xEEte005"
+    2300010: "Bo\xEEte006"
+    2300012: "Sph\xE8re001"
+    2300014: "Sph\xE8re002"
+    2300016: "Sph\xE8re003"
+    2300018: //RootNode
+    2300020: armLeft
+    2300022: armRight
+    2300024: eyeLeft
+    2300026: eyeRight
+    2300028: feetLeft
+    2300030: feetRight
+    2300032: mouthDown
+    2300034: mouthUp
+    3300000: "Bo\xEEte001"
+    3300002: "Bo\xEEte002"
+    3300004: "Bo\xEEte003"
+    3300006: "Bo\xEEte004"
+    3300008: "Bo\xEEte005"
+    3300010: "Bo\xEEte006"
+    3300012: "Sph\xE8re001"
+    3300014: "Sph\xE8re002"
+    3300016: "Sph\xE8re003"
+    3300018: //RootNode
+    3300020: armLeft
+    3300022: armRight
+    3300024: eyeLeft
+    3300026: eyeRight
+    3300028: feetLeft
+    3300030: feetRight
+    3300032: mouthDown
+    3300034: mouthUp
+    4300000: "Sph\xE8re001"
+    4300002: "Sph\xE8re002"
+    4300004: "Sph\xE8re003"
+    4300006: "Bo\xEEte001"
+    4300008: "Bo\xEEte002"
+    4300010: "Bo\xEEte003"
+    4300012: "Bo\xEEte004"
+    4300014: "Bo\xEEte005"
+    4300016: "Bo\xEEte006"
+    4300018: armRight
+    4300020: armLeft
+    4300022: feetLeft
+    4300024: feetRight
+    4300026: mouthUp
+    4300028: mouthDown
+    4300030: eyeLeft
+    4300032: eyeRight
+    7400000: Walk
+    7400002: Eat
+    7400004: Dance
+    7400006: Throw
+    7400008: Dive
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "Bo\xEEte001"
+        weight: 1
+      - path: "Bo\xEEte002"
+        weight: 1
+      - path: "Bo\xEEte003"
+        weight: 1
+      - path: "Bo\xEEte004"
+        weight: 1
+      - path: "Bo\xEEte005"
+        weight: 1
+      - path: "Bo\xEEte006"
+        weight: 1
+      - path: "Sph\xE8re002"
+        weight: 1
+      - path: "Sph\xE8re003"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "Bo\xEEte001"
+        weight: 1
+      - path: "Bo\xEEte002"
+        weight: 1
+      - path: "Bo\xEEte003"
+        weight: 1
+      - path: "Bo\xEEte004"
+        weight: 1
+      - path: "Bo\xEEte005"
+        weight: 1
+      - path: "Bo\xEEte006"
+        weight: 1
+      - path: "Sph\xE8re002"
+        weight: 1
+      - path: "Sph\xE8re003"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dance
+      takeName: Take 001
+      firstFrame: 55
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "Bo\xEEte001"
+        weight: 1
+      - path: "Bo\xEEte002"
+        weight: 1
+      - path: "Bo\xEEte003"
+        weight: 1
+      - path: "Bo\xEEte004"
+        weight: 1
+      - path: "Bo\xEEte005"
+        weight: 1
+      - path: "Bo\xEEte006"
+        weight: 1
+      - path: "Sph\xE8re002"
+        weight: 1
+      - path: "Sph\xE8re003"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Throw
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "Bo\xEEte001"
+        weight: 1
+      - path: "Bo\xEEte002"
+        weight: 1
+      - path: "Bo\xEEte003"
+        weight: 1
+      - path: "Bo\xEEte004"
+        weight: 1
+      - path: "Bo\xEEte005"
+        weight: 1
+      - path: "Bo\xEEte006"
+        weight: 1
+      - path: "Sph\xE8re002"
+        weight: 1
+      - path: "Sph\xE8re003"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dive
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "Bo\xEEte001"
+        weight: 1
+      - path: "Bo\xEEte002"
+        weight: 1
+      - path: "Bo\xEEte003"
+        weight: 1
+      - path: "Bo\xEEte004"
+        weight: 1
+      - path: "Bo\xEEte005"
+        weight: 1
+      - path: "Bo\xEEte006"
+        weight: 1
+      - path: "Sph\xE8re002"
+        weight: 1
+      - path: "Sph\xE8re003"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
