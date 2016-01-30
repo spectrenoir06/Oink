@@ -14,9 +14,6 @@ public class SetSunLight : MonoBehaviour
   private Transform mainCamera;
 
   [SerializeField]
-  private Renderer water;
-
-  [SerializeField]
   private Transform stars;
 
   [SerializeField]
@@ -39,9 +36,6 @@ public class SetSunLight : MonoBehaviour
 
     Vector3 tvec = Camera.main.transform.position;
     worldProbe.transform.position = tvec;
-
-    water.material.mainTextureOffset = new Vector2(Time.time / 100, 0);
-    water.material.SetTextureOffset("_DetailAlbedoMap", new Vector2(0, Time.time / 80));
 
   }
 
