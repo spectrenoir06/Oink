@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 460478}
   - 114: {fileID: 11438950}
   m_Layer: 0
-  m_Name: ButtonManager
+  m_Name: UIObjectsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,6 +536,7 @@ MonoBehaviour:
   go_creditButton: {fileID: 143902}
   go_quitButton: {fileID: 196990}
   go_backButton: {fileID: 177080}
+  go_creditText: {fileID: 126310}
 --- !u!114 &11440180
 MonoBehaviour:
   m_ObjectHideFlags: 1

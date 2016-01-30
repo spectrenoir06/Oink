@@ -15,12 +15,8 @@ public class GlobalVariables : MonoBehaviour {
     public List<string> list_creditMembers = new List<string>();
     public static List<string> LIST_CREDIT_MEMBERS;
 
-    public GameObject go_creditText;
-    public static GameObject GO_CREDIT_TEXT;
-
     void Awake()
     {
         LIST_CREDIT_MEMBERS = list_creditMembers;
-        GO_CREDIT_TEXT = go_creditText;
     }
 }

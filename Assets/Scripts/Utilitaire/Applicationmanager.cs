@@ -5,10 +5,12 @@ using System.Collections.Generic;
 public class Applicationmanager : MonoBehaviour {
 
     private ApplicationStateMachine appliStateMachine;
+    private InGameStateMachine inGameStateMachine;
 
 
     // Use this for initialization
     void Start () {
+#region applicationStateMachine
 
         //create the application state machine
         appliStateMachine = new ApplicationStateMachine();
@@ -20,10 +22,18 @@ public class Applicationmanager : MonoBehaviour {
 
         //initialize the current state
         appliStateMachine.initCurrentState(Enum_AppliStateKey.MenuMain);
+
+#endregion applicationStateMachine
+
+#region InGameStateMachine
+
+
+#endregion InGameStateMachine
+
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         appliStateMachine.update();
 	}
 

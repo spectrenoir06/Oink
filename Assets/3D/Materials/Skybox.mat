@@ -155,11 +155,11 @@ Material:
       data:
         first:
           name: _SunSize
-        second: 0.086
+        second: 0
       data:
         first:
           name: _AtmosphereThickness
-        second: 0.8220592
+        second: 0.69238037
       data:
         first:
           name: _Parallax
