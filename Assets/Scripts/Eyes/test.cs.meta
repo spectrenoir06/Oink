@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 39ec06af6de96432b81085c9b0e2fde3
-labels:
-- shadow
-- volume
-- toolkit
-- dynamic
-- lighting
-- shadows
-- shade
+guid: 5cb4cb2aa05630747b9b4555f6182971
+timeCreated: 1454188926
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
