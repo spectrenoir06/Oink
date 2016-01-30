@@ -36,14 +36,12 @@ public class PingouinNavigation : MonoBehaviour
     private void FixedUpdate()
     {
         if (walking)
-            mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.y * speed);
+            mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed);
 
         if (jumpRequested)
         {
-            mRigidbody.AddForce(Vector3.up * 100);
-            {
-                jumpRequested = false;
-            }
+            mRigidbody.AddForce(Vector3.up * 500);
+            jumpRequested = false;
         }
     }
 }
