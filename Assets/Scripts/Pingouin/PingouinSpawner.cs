@@ -26,7 +26,6 @@ public class PingouinSpawner : MonoBehaviour
 
     public void createPrefabAtPosition(Vector3 position)
     { 
-        Debug.Log(position);
         GameObject newFish = Instantiate(pingouinPrefab) as GameObject;
         newFish.transform.position = position;
     }
