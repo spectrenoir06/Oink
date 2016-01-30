@@ -1,4 +1,7 @@
 fileFormatVersion: 2
-guid: 0e1814f8cf7042d43ae7d0d38d22c29e
-NativeFormatImporter:
-  userData: 
+guid: e0232b959f2e08546a2f9f3cd836bd4f
+labels:
+- cartoonfx
+- particles
+- water
+- toon

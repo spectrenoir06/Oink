@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: 76e0163e1fa33204c9f54b8c87680c64
-timeCreated: 1454164170
-licenseType: Free
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+guid: dc6da1d6e30d6dd42ae82d67fdea65a3
+labels:
+- cartoonfx
+- particles
+- explosion
+- smoke
+- toon
+- ground
