@@ -1,0 +1,16 @@
+﻿import 'System'
+import 'UnityEngine'
+import 'Assembly-CSharp'
+
+function enter(npc)
+	npc:playAnimation("jumpOut");
+end
+
+function update(npc)
+
+end
+
+function leave(npc)
+	npc:playAnimation("jumpIn");
+	npc:changeState("PingouinWalk");
+end
