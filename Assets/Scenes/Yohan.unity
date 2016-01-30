@@ -424,6 +424,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9582770, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: aa73616dacbda6148ab458e500f01099, type: 2}
     m_RemovedComponents:
     - {fileID: 11466682, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
     - {fileID: 5451446, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
@@ -491,6 +495,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9582770, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b59de2c21599885498c7e07e900da1a3, type: 2}
     m_RemovedComponents:
     - {fileID: 11466682, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
     - {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
@@ -1260,6 +1268,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9582770, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b59de2c21599885498c7e07e900da1a3, type: 2}
     m_RemovedComponents:
     - {fileID: 11466682, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
     - {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
@@ -2852,7 +2864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415262, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 415262, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2898,6 +2910,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9582770, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b59de2c21599885498c7e07e900da1a3, type: 2}
     m_RemovedComponents:
     - {fileID: 11466682, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
     - {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
