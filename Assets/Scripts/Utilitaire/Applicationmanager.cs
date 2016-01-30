@@ -1,40 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Applicationmanager : MonoBehaviour {
 
     private ApplicationStateMachine appliStateMachine;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
+
         //create the application state machine
         appliStateMachine = new ApplicationStateMachine();
 
         //register all of the states
-        appliStateMachine.registerState(Enum_AppliStateKey.Credit, new CreditState());
+        appliStateMachine.registerState(Enum_AppliStateKey.MenuCredit, new MenuCreditState());
         appliStateMachine.registerState(Enum_AppliStateKey.Game, new GameState());
-        appliStateMachine.registerState(Enum_AppliStateKey.Quit, new QuitState());
+        appliStateMachine.registerState(Enum_AppliStateKey.MenuMain, new MenuMainState());
 
         //initialize the current state
-        appliStateMachine.initCurrentState(Enum_AppliStateKey.Credit);
-	}
+        appliStateMachine.initCurrentState(Enum_AppliStateKey.MenuMain);
+    }
 
 	// Update is called once per frame
 	void Update () {
-        switch (appliStateMachine.CurrentstateKey)
-        {
-            case Enum_AppliStateKey.Credit :
-                appliStateMachine.CurrentState.update();
-                break;
-            case Enum_AppliStateKey.Game :
-                appliStateMachine.CurrentState.update();
-                break;
-            case Enum_AppliStateKey.Quit :
-                appliStateMachine.CurrentState.update();
-                break;
-            default:
-                break;
-        }
+        appliStateMachine.update();
 	}
 
     public void OnClickGameButton()
@@ -44,16 +34,24 @@ public class Applicationmanager : MonoBehaviour {
 
     public void OnClickCreditButton()
     {
-        appliStateMachine.changeState(Enum_AppliStateKey.Credit);
+        appliStateMachine.changeState(Enum_AppliStateKey.MenuCredit);
     }
 
     public void OnClickQuitButton()
     {
-        appliStateMachine.changeState(Enum_AppliStateKey.Quit);
+        Application.Quit();
     }
 
-    public ApplicationStateMachine getAppliStateMachine()
+    public void OnClickBackButton()
     {
-        return appliStateMachine;
+        Enum_AppliStateKey currentStateKey = appliStateMachine.CurrentstateKey;
+        if (currentStateKey == Enum_AppliStateKey.MenuCredit)
+        {
+            appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
+        }
+        else if (currentStateKey == Enum_AppliStateKey.Game)
+        {
+            appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
+        }
     }
 }

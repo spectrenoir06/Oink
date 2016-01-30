@@ -14,9 +14,5 @@ public class InGameStateMachine : StateMachine<Enum_InGameStateKey, InGameState>
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

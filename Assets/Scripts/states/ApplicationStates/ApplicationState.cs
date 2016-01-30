@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class ApplicationState : State
+public abstract class ApplicationState : MonoBehaviour, State
 {
     public virtual void update()
     {

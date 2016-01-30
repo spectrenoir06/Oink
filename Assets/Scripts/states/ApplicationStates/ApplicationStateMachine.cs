@@ -4,8 +4,8 @@ using System.Collections;
 public enum Enum_AppliStateKey
 {
     Game,
-    Credit,
-    Quit
+    MenuMain,
+    MenuCredit
 }
 
 public class ApplicationStateMachine : StateMachine<Enum_AppliStateKey, ApplicationState>
