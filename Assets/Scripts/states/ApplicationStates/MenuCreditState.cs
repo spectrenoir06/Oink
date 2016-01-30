@@ -37,6 +37,9 @@ public class MenuCreditState : ApplicationState {
         uiObjectsContainer.go_gameButton.SetActive(false);
         uiObjectsContainer.go_creditButton.SetActive(false);
         uiObjectsContainer.go_quitButton.SetActive(false);
+        uiObjectsContainer.go_ruleButton.SetActive(false);
+        uiObjectsContainer.go_quitGameButton.SetActive(false);
+
         uiObjectsContainer.go_backButton.SetActive(true);
         uiObjectsContainer.go_creditText.SetActive(true);
     }

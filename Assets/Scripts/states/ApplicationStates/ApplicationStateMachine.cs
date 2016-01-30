@@ -5,7 +5,8 @@ public enum Enum_AppliStateKey
 {
     Game,
     MenuMain,
-    MenuCredit
+    MenuCredit,
+    MenuRule
 }
 
 public class ApplicationStateMachine : StateMachine<Enum_AppliStateKey, ApplicationState>
