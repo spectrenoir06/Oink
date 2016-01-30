@@ -3,15 +3,17 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
-	npc:playAnimation("jumpOut");
 	npc:stopWalking();
+	npc:jump();
 end
 
 function update(npc)
-	npc:goToClosestFish();
+
+end
+
+function onTouchGround(npc)
+	npc:changeState("PingouinWalk");
 end
 
 function leave(npc)
-	npc:playAnimation("jumpIn");
-	npc:changeState("PingouinWalk");
 end

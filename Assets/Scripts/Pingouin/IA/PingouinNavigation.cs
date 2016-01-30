@@ -6,6 +6,9 @@ public class PingouinNavigation : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    [SerializeField] 
+    private NPCAIController ia;
+
     private Rigidbody mRigidbody;
     private bool jumpRequested;
 
@@ -31,17 +34,26 @@ public class PingouinNavigation : MonoBehaviour
     public void jump()
     {
         jumpRequested = true;
+        mRigidbody.AddRelativeForce(Vector3.up * 500 + Vector3.forward * 200);
+    }
+
+    private void goForward(float fspeed)
+    {
+        mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * speed);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Banquise")
+        {
+            jumpRequested = false;
+            ia.notifytouchGround();
+        }
     }
 
     private void FixedUpdate()
     {
         if (walking)
-            mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed);
-
-        if (jumpRequested)
-        {
-            mRigidbody.AddForce(Vector3.up * 500);
-            jumpRequested = false;
-        }
+            goForward(1);
     }
 }
