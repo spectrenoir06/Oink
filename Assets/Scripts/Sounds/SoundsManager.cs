@@ -99,6 +99,11 @@ public class SoundsManager : MonoBehaviour
         return play(clipName, point, 1f, 1f);
     }
 
+    public AudioSource play(string clipName)
+    {
+        return play(clipName, Camera.main.transform.position, 1f, 1f);
+    }
+
     public AudioSource Play(string clipName, Vector3 point, float volume)
     {
         return play(clipName, point, volume, 1f);
