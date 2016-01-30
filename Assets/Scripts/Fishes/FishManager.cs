@@ -35,15 +35,15 @@ public class FishManager : MonoBehaviour
             instance = this;
 
         fishPrefab = Resources.Load("fish 1") as GameObject;
-        createPrefabAtPostion(transform.position);
+        createPrefabAtPosition(transform.position);
     }
 
-    public void createPrefabAtPostion(Vector3 position)
+    public void createPrefabAtPosition(Vector3 position)
     {
-        createPrefabAtPostion(position, Quaternion.identity);
+        createPrefabAtPosition(position, Quaternion.identity);
     }
 
-    public void createPrefabAtPostion(Vector3 position, Quaternion rotation)
+    public void createPrefabAtPosition(Vector3 position, Quaternion rotation)
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
         fishList.Add(newFish.GetComponent<Fish>());

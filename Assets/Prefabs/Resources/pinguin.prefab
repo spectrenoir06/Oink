@@ -44,6 +44,9 @@ GameObject:
   - 4: {fileID: 415262}
   - 114: {fileID: 11466682}
   - 114: {fileID: 11424090}
+  - 54: {fileID: 5451446}
+  - 136: {fileID: 13663156}
+  - 114: {fileID: 11403904}
   m_Layer: 0
   m_Name: pinguin
   m_TagString: Untagged
@@ -191,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456086}
@@ -601,6 +604,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122930}
   m_Mesh: {fileID: 4300026, guid: 312ca233de9db764fa651cc1f7d945bd, type: 3}
+--- !u!54 &5451446
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134396}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!95 &9582770
 Animator:
   serializedVersion: 3
@@ -618,6 +636,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11403904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96752a5b593a314499cffff76777a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &11424090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -629,10 +659,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5cc5709f6eb8c498e4996042726def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startState: {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}
+  startState: {fileID: 4900000, guid: 8af5b61d6febd904e86cbbf9898a8537, type: 3}
   stateList:
   - {fileID: 4900000, guid: 14a293171a559da41a98a64d5ada0808, type: 3}
-  - {fileID: 4900000, guid: 8af5b61d6febd904e86cbbf9898a8537, type: 3}
+  - {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}
   - {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
 --- !u!114 &11458874
 MonoBehaviour:
@@ -658,6 +688,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c774c41bf093db4ca7e1b5680f1e059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navigation: {fileID: 11403904}
+--- !u!136 &13663156
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134396}
+  m_Material: {fileID: 13400000, guid: f03700746f127024e9741336814801e2, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.57, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
