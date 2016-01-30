@@ -6,13 +6,13 @@ public class MenuMainState : ApplicationState
 {
 
     public List<string> list_creditItems = new List<string>();
-    private ButtonManager buttonManager;
+    private UIObjectsContainer uiObjectsContainer;
 
     public MenuMainState()
     {
-        buttonManager = ButtonManager.getInstance();
-        if (buttonManager == null)
-            Debug.LogError("ERROR: buttonManager is null");
+        uiObjectsContainer = UIObjectsContainer.getInstance();
+        if (uiObjectsContainer == null)
+            Debug.LogError("ERROR: uiObjectsContainer is null");
     }
 
     // Use this for initialization
@@ -35,19 +35,18 @@ public class MenuMainState : ApplicationState
     {
         base.enterState(previousState);
 
-        buttonManager.go_gameButton.SetActive(true);
-        buttonManager.go_creditButton.SetActive(true);
-        buttonManager.go_quitButton.SetActive(true);
-        buttonManager.go_backButton.SetActive(false);
+        uiObjectsContainer.go_gameButton.SetActive(true);
+        uiObjectsContainer.go_creditButton.SetActive(true);
+        uiObjectsContainer.go_quitButton.SetActive(true);
+        uiObjectsContainer.go_backButton.SetActive(false);
     }
 
     public override void leaveState()
     {
         base.leaveState();
 
-        buttonManager.go_gameButton.SetActive(false);
-        buttonManager.go_creditButton.SetActive(false);
-        buttonManager.go_quitButton.SetActive(false);
-        buttonManager.go_backButton.SetActive(false);
+        uiObjectsContainer.go_gameButton.SetActive(false);
+        uiObjectsContainer.go_creditButton.SetActive(false);
+        uiObjectsContainer.go_quitButton.SetActive(false);
     }
 }

@@ -1,24 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InGameState : State {
+public abstract class InGameState : State {
 
-    public void update()
+    public virtual void update()
     {
 
     }
 
-    public void fixedUpdate()
+    public virtual void fixedUpdate()
     {
 
     }
 
-    public void enterState(State previousState)
+    public virtual void enterState(State previousState)
     {
 
     }
 
-    public void leaveState()
+    public virtual void leaveState()
     {
 
     }
