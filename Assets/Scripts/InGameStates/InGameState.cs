@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AbstractGameState : State
-{
+public class InGameState : State {
+
     public void update()
     {
 
@@ -10,7 +10,7 @@ public class AbstractGameState : State
 
     public void fixedUpdate()
     {
-         
+
     }
 
     public void enterState(State previousState)

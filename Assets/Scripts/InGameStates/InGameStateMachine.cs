@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum GameState
+public enum Enum_InGameStateKey
 {
-    Menu,
-    Game
+    One,
+    Two
 }
 
-public class GameStateMachine : StateMachine<GameState, AbstractGameState>
+public class InGameStateMachine : StateMachine<Enum_InGameStateKey, InGameState>
 {
+
 	// Use this for initialization
 	void Start () {
 	

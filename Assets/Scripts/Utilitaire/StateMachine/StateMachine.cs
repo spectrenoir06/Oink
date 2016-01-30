@@ -6,9 +6,9 @@ public class StateMachine<T, U> where U : State
 {
     private Dictionary<T, U> stateDictionnary;
 
-    private T currentStateName;
-    public T CurrentstateName
-    { get { return currentStateName; } }
+    private T currentStateKey;
+    public T CurrentstateKey
+    { get { return currentStateKey; } }
 
     private U currentState;
     public U CurrentState
@@ -19,15 +19,15 @@ public class StateMachine<T, U> where U : State
         stateDictionnary = new Dictionary<T, U>();
     }
 
-    public void registerState(T name, U state)
+    public void registerState(T key, U state)
     {
-        stateDictionnary.Add(name, state);
+        stateDictionnary.Add(key, state);
     }
 
-    public void initCurrentState(T name)
+    public void initCurrentState(T key)
     {
-        currentStateName = name;
-        currentState = stateDictionnary[name];
+        currentStateKey = key;
+        currentState = stateDictionnary[key];
         currentState.enterState(currentState);
     }
 
@@ -43,7 +43,7 @@ public class StateMachine<T, U> where U : State
 
     public void changeState(T newState)
     {
-        currentStateName = newState;
+        currentStateKey = newState;
         currentState.leaveState();
         stateDictionnary[newState].enterState(currentState);
         currentState = stateDictionnary[newState];
