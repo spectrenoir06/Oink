@@ -58,4 +58,10 @@ public class NPCAIController : MonoBehaviour
     {
         return stateMachine.hasState(stateName);
     }
+
+  public void startWalking()
+  {
+
+  }
+
 }
