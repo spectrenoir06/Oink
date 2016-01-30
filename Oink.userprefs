@@ -1,11 +1,11 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pingouin/IA/PingouinAIState.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Lua\Resources\PingouinWalk.txt">
     <Files>
-      <File FileName="Assets/Scripts/Pingouin/IA/PingouinAIState.cs" Line="6" Column="6" />
-      <File FileName="Assets/Scripts/IA/NPCAIController.cs" Line="106" Column="106" />
-      <File FileName="Assets/Scripts/Pingouin/PingouinSpawner.cs" Line="35" Column="35" />
-      <File FileName="Assets/Scripts/Pingouin/Pingouin.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Lua\NLua\NLua\LuaLib\LuaLib.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Lua\NLua\KeraLua\DynamicLibraryPath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utilitaire\StateMachine\StateMachine.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Lua\Resources\PingouinWalk.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

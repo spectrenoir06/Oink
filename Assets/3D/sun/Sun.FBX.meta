@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: ddfaddda517ad5c438e622cf2f20aec5
+timeCreated: 1454156836
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone005
+    100002: Bone006
+    100004: Bone007
+    100006: "Bo\xEEte007"
+    100008: "Bo\xEEte008"
+    100010: "Bo\xEEte009"
+    100012: "Bo\xEEte010"
+    100014: "Bo\xEEte011"
+    100016: "Bo\xEEte012"
+    100018: "Bo\xEEte013"
+    100020: "Bo\xEEte014"
+    100022: "Bo\xEEte015"
+    100024: "Bo\xEEte016"
+    100026: "Sph\xE8re002"
+    100028: "Sph\xE8re003"
+    100030: "Sph\xE8re004"
+    100032: //RootNode
+    400000: Bone005
+    400002: Bone006
+    400004: Bone007
+    400006: "Bo\xEEte007"
+    400008: "Bo\xEEte008"
+    400010: "Bo\xEEte009"
+    400012: "Bo\xEEte010"
+    400014: "Bo\xEEte011"
+    400016: "Bo\xEEte012"
+    400018: "Bo\xEEte013"
+    400020: "Bo\xEEte014"
+    400022: "Bo\xEEte015"
+    400024: "Bo\xEEte016"
+    400026: "Sph\xE8re002"
+    400028: "Sph\xE8re003"
+    400030: "Sph\xE8re004"
+    400032: //RootNode
+    2300000: "Bo\xEEte007"
+    2300002: "Bo\xEEte008"
+    2300004: "Bo\xEEte009"
+    2300006: "Bo\xEEte010"
+    2300008: "Bo\xEEte011"
+    2300010: "Bo\xEEte012"
+    2300012: "Bo\xEEte013"
+    2300014: "Bo\xEEte014"
+    2300016: "Bo\xEEte015"
+    2300018: "Bo\xEEte016"
+    2300020: "Sph\xE8re003"
+    2300022: "Sph\xE8re004"
+    3300000: "Bo\xEEte007"
+    3300002: "Bo\xEEte008"
+    3300004: "Bo\xEEte009"
+    3300006: "Bo\xEEte010"
+    3300008: "Bo\xEEte011"
+    3300010: "Bo\xEEte012"
+    3300012: "Bo\xEEte013"
+    3300014: "Bo\xEEte014"
+    3300016: "Bo\xEEte015"
+    3300018: "Bo\xEEte016"
+    3300020: "Sph\xE8re003"
+    3300022: "Sph\xE8re004"
+    4300000: "Sph\xE8re002"
+    4300002: "Bo\xEEte007"
+    4300004: "Bo\xEEte008"
+    4300006: "Bo\xEEte009"
+    4300008: "Bo\xEEte010"
+    4300010: "Bo\xEEte011"
+    4300012: "Bo\xEEte012"
+    4300014: "Bo\xEEte016"
+    4300016: "Bo\xEEte013"
+    4300018: "Bo\xEEte014"
+    4300020: "Bo\xEEte015"
+    4300022: "Sph\xE8re003"
+    4300024: "Sph\xE8re004"
+    7400000: scream
+    9500000: //RootNode
+    13700000: "Sph\xE8re002"
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: scream
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone005
+        weight: 1
+      - path: Bone005/Bone006
+        weight: 1
+      - path: "Bone005/Bone006/Bo\xEEte016"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte007"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte008"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte009"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte010"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte011"
+        weight: 1
+      - path: "Bone005/Bone006/Sph\xE8re002/Bo\xEEte012"
+        weight: 1
+      - path: Bone005/Bone007
+        weight: 1
+      - path: "Bone005/Bone007/Bo\xEEte013"
+        weight: 1
+      - path: "Bone005/Bone007/Bo\xEEte013/Bo\xEEte014"
+        weight: 1
+      - path: "Bone005/Bone007/Bo\xEEte013/Bo\xEEte015"
+        weight: 1
+      - path: "Bone005/Sph\xE8re003"
+        weight: 1
+      - path: "Bone005/Sph\xE8re004"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
