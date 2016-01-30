@@ -8,6 +8,9 @@ public class SetSunLight : MonoBehaviour
   private Transform sun;
 
   [SerializeField]
+  private AudioSource screamingSound;
+
+  [SerializeField]
   private Transform mainCamera;
 
   Material sky;
@@ -32,6 +35,8 @@ public class SetSunLight : MonoBehaviour
   void Update()
   {
     sun.LookAt(mainCamera);
+    if (sun.position.y > -100 && sun.position.y < 100)
+      screamingSound.volume = (sun.position.y + 100) / 1000;
     stars.transform.rotation = transform.rotation;
 
     Vector3 tvec = Camera.main.transform.position;
