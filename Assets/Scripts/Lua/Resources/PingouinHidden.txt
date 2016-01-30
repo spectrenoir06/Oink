@@ -4,6 +4,7 @@ import 'Assembly-CSharp'
 
 function enter(npc)
 	npc:playAnimation("jumpOut");
+	npc:stopWalking();
 end
 
 function update(npc)
