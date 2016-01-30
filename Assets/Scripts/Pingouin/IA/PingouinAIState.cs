@@ -28,6 +28,17 @@ public class PingouinAIState : NPCAIState
 
     }
 
+    public void jump()
+    {
+        transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform);
+        navigation.jump();
+    }
+
+    public void notifytouchGround()
+    {
+        lua.call("onTouchGround", this);
+    }
+
     public void stopWalking()
     {
         navigation.setWalkingState(false);

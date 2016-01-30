@@ -3,6 +3,5 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
-	Debug.Log("POUET");
-	--npc.setWalkingState(true)
+	npc:startWalking()
 end

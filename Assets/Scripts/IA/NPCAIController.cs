@@ -59,6 +59,11 @@ public class NPCAIController : MonoBehaviour
         return stateMachine.hasState(stateName);
     }
 
+    public void notifytouchGround()
+    {
+        (stateMachine.CurrentState as PingouinAIState).notifytouchGround();
+    }
+
   public void startWalking()
   {
 
