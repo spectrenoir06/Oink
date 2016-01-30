@@ -24,14 +24,28 @@ public class SoundsManager : MonoBehaviour
         }
     }
 
-    public void fadeOut(AudioSource source, float speed = 0.03f)
+    public void fadeOut(AudioSource source, float speed = -0.01f)
     {
-        StartCoroutine(fadeCoroutine(source, speed));
+        StartCoroutine(fadeInCoroutine(source, speed));
     }
 
-    private IEnumerator fadeCoroutine(AudioSource source, float speed)
+    private IEnumerator fadeOutCoroutine(AudioSource source, float speed)
     {
-        while(source.volume > 0)
+        while (source.volume > 0)
+        {
+            source.volume += speed;
+            yield return null;
+        }
+    }
+
+    public void fadeIn(AudioSource source, float speed = 0.01f)
+    {
+        StartCoroutine(fadeInCoroutine(source, speed));
+    }
+
+    private IEnumerator fadeInCoroutine(AudioSource source, float speed)
+    {
+        while(source.volume < 1)
         {
             source.volume += speed;
             yield return null;
