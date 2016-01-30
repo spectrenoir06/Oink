@@ -19,6 +19,7 @@ public class Applicationmanager : MonoBehaviour {
         appliStateMachine.registerState(Enum_AppliStateKey.MenuCredit, new MenuCreditState());
         appliStateMachine.registerState(Enum_AppliStateKey.Game, new GameState());
         appliStateMachine.registerState(Enum_AppliStateKey.MenuMain, new MenuMainState());
+        appliStateMachine.registerState(Enum_AppliStateKey.MenuRule, new MenuRuleState());
 
         //initialize the current state
         appliStateMachine.initCurrentState(Enum_AppliStateKey.MenuMain);
@@ -59,9 +60,23 @@ public class Applicationmanager : MonoBehaviour {
         {
             appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
         }
+        else if (currentStateKey == Enum_AppliStateKey.MenuRule)
+        {
+            appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
+        }
         else if (currentStateKey == Enum_AppliStateKey.Game)
         {
             appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
         }
+    }
+
+    public void OnClickRuleButton()
+    {
+        appliStateMachine.changeState(Enum_AppliStateKey.MenuRule);
+    }
+
+    public void OnClickQuitGameButton()
+    {
+        appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
     }
 }

@@ -35,10 +35,15 @@ public class MenuMainState : ApplicationState
     {
         base.enterState(previousState);
 
+        uiObjectsContainer.go_backButton.SetActive(false);
+        uiObjectsContainer.go_creditText.SetActive(false);
+        uiObjectsContainer.go_quitGameButton.SetActive(false);
+
+        uiObjectsContainer.go_ruleButton.SetActive(true);
         uiObjectsContainer.go_gameButton.SetActive(true);
         uiObjectsContainer.go_creditButton.SetActive(true);
         uiObjectsContainer.go_quitButton.SetActive(true);
-        uiObjectsContainer.go_backButton.SetActive(false);
+
     }
 
     public override void leaveState()
@@ -48,5 +53,6 @@ public class MenuMainState : ApplicationState
         uiObjectsContainer.go_gameButton.SetActive(false);
         uiObjectsContainer.go_creditButton.SetActive(false);
         uiObjectsContainer.go_quitButton.SetActive(false);
+        uiObjectsContainer.go_ruleButton.SetActive(false);
     }
 }
