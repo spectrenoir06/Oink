@@ -192,7 +192,7 @@ Transform:
   m_Children:
   - {fileID: 1127391986}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &873157957 stripped
 Transform:
   m_PrefabParentObject: {fileID: 465324, guid: 1a13152be88c38e4d8f520b57186100f, type: 2}
@@ -1928,7 +1928,61 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+--- !u!1001 &1435217767
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.547
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.1371031
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 406754, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13696712, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_Radius
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 13696712, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_Height
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13696712, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1990915851
 Prefab:
   m_ObjectHideFlags: 0
@@ -1971,6 +2025,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f00d13bb7650bb42b0e39fed305ef4a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2034239446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2034239448}
+  - 114: {fileID: 2034239447}
+  m_Layer: 0
+  m_Name: FishManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2034239447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034239446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cb10e121be8aa438316cb7c7646068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPrefab: {fileID: 118796, guid: 1136ee11f176abb4c970e1f0445faf7d, type: 2}
+--- !u!4 &2034239448
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034239446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!4 &2054707473 stripped
 Transform:
   m_PrefabParentObject: {fileID: 439334, guid: 432684738ed9ea343a5cde645e601354, type: 2}
