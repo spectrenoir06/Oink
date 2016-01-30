@@ -29,10 +29,4 @@ public class UIObjectsContainer : MonoBehaviour {
 
         return instance;
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-
 }
