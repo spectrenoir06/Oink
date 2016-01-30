@@ -26,8 +26,7 @@ public class PingouinSpawner : MonoBehaviour
 
     public void createPrefabAtPosition(Vector3 position)
     { 
-        GameObject newFish = Instantiate(pingouinPrefab) as GameObject;
-        newFish.transform.position = position;
+        Instantiate(pingouinPrefab, position, Quaternion.identity);
     }
 
     // Update is called once per frame

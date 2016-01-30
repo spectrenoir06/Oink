@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class FishManager : MonoBehaviour
 {
     private static FishManager instance;
+
     private GameObject fishPrefab;
 
     private List<Fish> fishList;
@@ -28,16 +29,21 @@ public class FishManager : MonoBehaviour
 
     private void Awake()
     {
-        fishPrefab = Resources.Load("fish") as GameObject;
-        createPrefabAtPostiion(transform.position);
+        if (instance == null)
+
+            //if not, set instance to this
+            instance = this;
+
+        fishPrefab = Resources.Load("fish 1") as GameObject;
+        createPrefabAtPostion(transform.position);
     }
 
-    public void createPrefabAtPostiion(Vector3 position)
+    public void createPrefabAtPostion(Vector3 position)
     {
-        createPrefabAtPostiion(position, Quaternion.identity);
+        createPrefabAtPostion(position, Quaternion.identity);
     }
 
-    public void createPrefabAtPostiion(Vector3 position, Quaternion rotation)
+    public void createPrefabAtPostion(Vector3 position, Quaternion rotation)
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
         fishList.Add(newFish.GetComponent<Fish>());

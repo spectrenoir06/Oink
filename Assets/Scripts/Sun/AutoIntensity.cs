@@ -38,10 +38,14 @@ public class AutoIntensity : MonoBehaviour
   [SerializeField]
   private Vector3 nightRotateSpeed;
 
+  [SerializeField]
+  private Transform stars;
+  [SerializeField]
+  private Light mainLight;
+
   private float skySpeed = 1;
 
 
-  private Light mainLight;
   private Skybox sky;
   private Material skyMat;
 
@@ -63,10 +67,7 @@ public class AutoIntensity : MonoBehaviour
 
   void Start()
   {
-
-    mainLight = GetComponent<Light>();
     skyMat = RenderSettings.skybox;
-
   }
 
   void Update()
@@ -101,9 +102,9 @@ public class AutoIntensity : MonoBehaviour
     skyMat.SetFloat("_AtmosphereThickness", i);
 
     if (dot > 0)
-      transform.Rotate(dayRotateSpeed * Time.deltaTime * skySpeed);
+      stars.Rotate(dayRotateSpeed * Time.deltaTime * skySpeed);
     else
-      transform.Rotate(nightRotateSpeed * Time.deltaTime * skySpeed);
+      stars.Rotate(nightRotateSpeed * Time.deltaTime * skySpeed);
 
 #if UNITY_EDITOR
     if (Input.GetKeyDown(KeyCode.Q)) skySpeed *= 0.5f;

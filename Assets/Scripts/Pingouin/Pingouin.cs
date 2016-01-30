@@ -3,14 +3,17 @@ using System.Collections;
 
 public class Pingouin : MonoBehaviour
 {
+    [SerializeField]
+    private PingouinNavigation navigation;
+
 	// Use this for initialization
 	void Start ()
     {
         transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform);
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void OnMouseDown()
+    {
+        navigation.jump();
+    }
 }

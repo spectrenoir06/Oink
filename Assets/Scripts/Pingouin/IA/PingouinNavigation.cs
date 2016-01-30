@@ -6,11 +6,16 @@ public class PingouinNavigation : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    private Rigidbody mRigidbody;
+    private bool jumpRequested;
+
     bool walking;
 
     private void Awake()
     {
+        jumpRequested = false;
         walking = false;
+        mRigidbody = GetComponent<Rigidbody>();
     }
 
     public void setGoalPosition(Vector3 goal)
@@ -23,9 +28,20 @@ public class PingouinNavigation : MonoBehaviour
         walking = isWalking;
     }
 
-    private void Update()
+    public void jump()
     {
-        if(walking)
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        jumpRequested = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (walking)
+            mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed);
+
+        if (jumpRequested)
+        {
+            mRigidbody.AddForce(Vector3.up * 500);
+            jumpRequested = false;
+        }
     }
 }
