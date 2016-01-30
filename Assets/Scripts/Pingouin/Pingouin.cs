@@ -6,10 +6,13 @@ public class Pingouin : MonoBehaviour
     [SerializeField]
     private PingouinNavigation navigation;
 
-	// Use this for initialization
-	void Start ()
+    [SerializeField]
+    private PinguinAnimator animator;
+
+    // Use this for initialization
+    void Start ()
     {
-        transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform);
+        //transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, Vector3.right);
     }
 
     void OnMouseDown()
