@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 444050}
   - 33: {fileID: 3333000}
   - 23: {fileID: 2394820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: feetLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 404292}
   - 33: {fileID: 3380146}
   - 23: {fileID: 2362864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouthUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 54: {fileID: 5451446}
   - 136: {fileID: 13663156}
   - 114: {fileID: 11403904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pinguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - 4: {fileID: 452264}
   - 33: {fileID: 3379090}
   - 23: {fileID: 2381028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: feetRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - 23: {fileID: 2331232}
   - 95: {fileID: 9582770}
   - 114: {fileID: 11458874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pinguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - 4: {fileID: 496098}
   - 33: {fileID: 3333872}
   - 23: {fileID: 2356526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouthDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - 4: {fileID: 494708}
   - 33: {fileID: 3311968}
   - 23: {fileID: 2302260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - 4: {fileID: 444452}
   - 33: {fileID: 3363774}
   - 23: {fileID: 2327854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - 4: {fileID: 488006}
   - 33: {fileID: 3363786}
   - 23: {fileID: 2325588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - 4: {fileID: 476470}
   - 33: {fileID: 3323308}
   - 23: {fileID: 2313944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
