@@ -13,10 +13,26 @@ public class Pingouin : MonoBehaviour
     void Start ()
     {
         //transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, Vector3.right);
+        StartCoroutine(popFish());
+    }
+    
+    IEnumerator popFish()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(1);
+            throwFish();
+        }
     }
 
     void OnMouseDown()
     {
         navigation.jump();
+    }
+
+    void throwFish()
+    {
+        animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
+        FishManager.Instance.createPrefabAtPosition(transform.position);
     }
 }
