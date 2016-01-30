@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dcf5e70ea99b0446ea0ebe8cf37a025a
+labels:
+- shadow
+- volume
+- toolkit
+- dynamic
+- lighting
+- shadows
+- shade
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
