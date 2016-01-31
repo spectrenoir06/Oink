@@ -53,9 +53,4 @@ public class NPCAIState : State
     {
         return controller.hasState(stateName);
     }
-
-    public void playAnimation(string name)
-    {
-
-    }
 }

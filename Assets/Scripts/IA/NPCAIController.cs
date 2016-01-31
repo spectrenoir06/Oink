@@ -7,6 +7,8 @@ public class NPCAIController : MonoBehaviour
 {
     [SerializeField]
     private TextAsset startState;
+    [SerializeField]
+    private PinguinAnimator animator;
 
     [SerializeField]
     private List<TextAsset> stateList;
@@ -71,10 +73,26 @@ public class NPCAIController : MonoBehaviour
     {
         pingouin.throwFish();
     }
+    
+    public void startWalking()
+    {
+        (stateMachine.CurrentState as PingouinAIState).onAnimEnd();
+    }
+  
+    public void playAnimation(string name)
+    {
+        if (name == "dance&eat")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenEat);
+        else if (name == "eat")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Eat);
+        else if(name == "dance&dive")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
+        else if (name == "eat")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
+    }
 
-  public void startWalking()
-  {
-
-  }
-
+    public void onBorderBanquise()
+    {
+        (stateMachine.CurrentState as PingouinAIState).onBorderBanquise();
+    }
 }
