@@ -835,8 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 8300000, guid: fed3142aa08014a10bb990dd4e91b0e6, type: 3}
-  audioMixer: {fileID: 24302348, guid: 892c7e877cd2645acaba68b1a03f6ded, type: 2}
+  soundUtil: {fileID: 0}
   iaController: {fileID: 11424090}
   animator: {fileID: 9582770}
   ploufPrefab: {fileID: 100012, guid: e0232b959f2e08546a2f9f3cd836bd4f, type: 2}
