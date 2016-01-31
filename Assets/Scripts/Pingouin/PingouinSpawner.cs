@@ -14,6 +14,8 @@ public class PingouinSpawner : MonoBehaviour
 
     private GameObject pingouinPrefab;
 
+    private GameObject terrorist;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -35,13 +37,18 @@ public class PingouinSpawner : MonoBehaviour
     private IEnumerator initLevel()
     {
         int count = 0;
+        int terroristId = Random.Range(0, maxPinguin);
         while(maxPinguin - count > 0)
         {
             float delay = Random.Range(0.1f, 0.5f);
             yield return new WaitForSeconds(delay);
-            pickSpawnPosition(false);
+            pickSpawnPosition((count == terroristId));
             count++;
         }
+        if (!terrorist)
+            pickSpawnPosition(true);
+
+        terrorist.GetComponent<NPCAIController>().Activated = true;
     }
 
     public void createPrefabAtPosition(Vector3 position, bool isTerrorist)
@@ -51,18 +58,19 @@ public class PingouinSpawner : MonoBehaviour
 
         if(isTerrorist)
         {
-            ia.init(false, false, true);
+            ia.init(false, false, false);
+            terrorist = go;
         }
         else
         {
-            float rand = Random.Range(0, 1);
-            if(rand >= 0.5f)
+            float rand = Random.Range(0.0f, 1.0f);
+            if (rand >= 0.5f)
             {
-                ia.init(false, true, false);
+                ia.init(false, true, true);
             }
             else
             {
-                ia.init(true, false, false);
+                ia.init(true, false, true);
             }
         }
     }

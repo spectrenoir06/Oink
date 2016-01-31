@@ -26,6 +26,12 @@ public class PingouinAIState : NPCAIState
 
     public void goToMyFish()
     {
+        if (!fish)
+        {
+            findMyFish();
+            return;
+        }
+
         Vector3 goal = fish.transform.position;
         navigation.setGoalPosition(goal);
 		float dist = Vector3.Distance(goal, transform.position);
@@ -110,12 +116,7 @@ public class PingouinAIState : NPCAIState
 
     public void findMyFish()
     {
-        fish = FishManager.Instance.getClosestFish(transform.position);
-    }
-
-    public void findMySafeFish()
-    {
-        fish = FishManager.Instance.getClosestSafeFish(transform.position);
+        fish = controller.findMyFish();
     }
 
     public void die()

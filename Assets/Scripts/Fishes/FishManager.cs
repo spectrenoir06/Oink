@@ -108,7 +108,8 @@ public class FishManager : MonoBehaviour
                 closestFish = f;
             }
         }
-        closestFish.AvailableForPickup = false;
+        if(closestFish)
+            closestFish.AvailableForPickup = false;
         return closestFish;
 
     }
