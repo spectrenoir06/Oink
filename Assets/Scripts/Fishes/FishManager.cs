@@ -45,6 +45,7 @@ public class FishManager : MonoBehaviour
     public void createPrefabAtPosition(Vector3 position, Quaternion rotation)
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
+        newFish.GetComponent<Fish>().IsDangerous = true;
         fishList.Add(newFish.GetComponent<Fish>());
         Vector3 direction = GameObject.FindGameObjectWithTag("Banquise").transform.position - newFish.transform.position;
         direction.Normalize();

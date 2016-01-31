@@ -108,6 +108,11 @@ public class PingouinAIState : NPCAIState
         controller.playAnimation(name);
     }
 
+    public void die()
+    {
+
+    }
+
     public void onBorderBanquise()
     {
         lua.call("onBorderBanquise", this);

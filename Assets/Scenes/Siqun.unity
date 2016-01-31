@@ -404,18 +404,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 126310, guid: eb25bc6dce10b5d4d912073ceb95ab36, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449260, guid: eb25bc6dce10b5d4d912073ceb95ab36, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -272
-      objectReference: {fileID: 0}
-    - target: {fileID: 115418, guid: eb25bc6dce10b5d4d912073ceb95ab36, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb25bc6dce10b5d4d912073ceb95ab36, type: 2}
   m_IsPrefabParent: 0
