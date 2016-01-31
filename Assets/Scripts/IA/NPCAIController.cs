@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class NPCAIController : MonoBehaviour
 {
@@ -94,5 +95,10 @@ public class NPCAIController : MonoBehaviour
     public void onBorderBanquise()
     {
         (stateMachine.CurrentState as PingouinAIState).onBorderBanquise();
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }
