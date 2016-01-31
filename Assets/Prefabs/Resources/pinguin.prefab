@@ -835,7 +835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundUtil: {fileID: 0}
   iaController: {fileID: 11424090}
   animator: {fileID: 9582770}
   ploufPrefab: {fileID: 100012, guid: e0232b959f2e08546a2f9f3cd836bd4f, type: 2}
@@ -927,6 +926,10 @@ Prefab:
       value: 
       objectReference: {fileID: 24302348, guid: 892c7e877cd2645acaba68b1a03f6ded,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 134396}
