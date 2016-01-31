@@ -7,6 +7,7 @@ public class MenuCreditState : ApplicationState {
 
     private UIObjectsContainer uiObjectsContainer;
     private Credits credits;
+    private Applicationmanager manager;
 
     public MenuCreditState()
     {
@@ -15,12 +16,9 @@ public class MenuCreditState : ApplicationState {
             Debug.LogError("ERROR: uiObjectsContainer is null");
 
         credits = uiObjectsContainer.go_creditText.GetComponent<Credits>();
+
+        manager = Applicationmanager.GetInstance();
     }
-
-	// Use this for initialization
-	void Start () {
-
-	}
 
     public override void update()
     {
@@ -36,15 +34,8 @@ public class MenuCreditState : ApplicationState {
     {
         base.enterState(previousState);
 
-        uiObjectsContainer.go_gameButton.SetActive(false);
-        uiObjectsContainer.go_creditButton.SetActive(false);
-        uiObjectsContainer.go_quitButton.SetActive(false);
-        uiObjectsContainer.go_ruleButton.SetActive(false);
-        uiObjectsContainer.go_quitGameButton.SetActive(false);
-
-        uiObjectsContainer.go_backButton.SetActive(true);
+        manager.waitCredits(true);
         uiObjectsContainer.go_creditText.SetActive(true);
-
         Camera.main.gameObject.GetComponent<BlurOptimized>().enabled = true;
         credits.showCredits(true);
     }
@@ -53,9 +44,7 @@ public class MenuCreditState : ApplicationState {
     {
         base.leaveState();
 
-        uiObjectsContainer.go_backButton.SetActive(false);
         uiObjectsContainer.go_creditText.SetActive(false);
-
         credits.showCredits(false);
         credits.resetCredits();
         Camera.main.gameObject.GetComponent<BlurOptimized>().enabled = false;
