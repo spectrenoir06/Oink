@@ -820,9 +820,9 @@ MonoBehaviour:
   startState: {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
   animator: {fileID: 11458874}
   stateList:
-  - {fileID: 4900000, guid: 14a293171a559da41a98a64d5ada0808, type: 3}
+  - {fileID: 4900000, guid: 90674280cb1b90c42a6ac359dc29e692, type: 3}
   - {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}
-  - {fileID: 4900000, guid: 8af5b61d6febd904e86cbbf9898a8537, type: 3}
+  - {fileID: 4900000, guid: 7ebde3d8ae93bf94f8bcd221734ff242, type: 3}
   pingouin: {fileID: 11466682}
 --- !u!114 &11458874
 MonoBehaviour:
@@ -894,11 +894,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: stateList.Array.data[0]
       value: 
-      objectReference: {fileID: 4900000, guid: 14a293171a559da41a98a64d5ada0808, type: 3}
+      objectReference: {fileID: 4900000, guid: 90674280cb1b90c42a6ac359dc29e692, type: 3}
     - target: {fileID: 0}
       propertyPath: stateList.Array.data[2]
       value: 
-      objectReference: {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
+      objectReference: {fileID: 4900000, guid: 7ebde3d8ae93bf94f8bcd221734ff242, type: 3}
     - target: {fileID: 0}
       propertyPath: stateList.Array.data[3]
       value: 

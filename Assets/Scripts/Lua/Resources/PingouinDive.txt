@@ -8,7 +8,7 @@ end
 
 function onBorderBanquise(npc)
 	npc:stopWalking();
-	npc:playAnimation("dance&dive");
+	npc:playAnimation("dive");
 end
 
 function onAnimEnd(npc)

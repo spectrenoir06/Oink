@@ -69,7 +69,7 @@ public class Pingouin : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.transform == transform)
         {
-            throwFish();
+            throwFish(false);
         }
 
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(ray, out hit) && hit.transform == transform)
@@ -79,8 +79,8 @@ public class Pingouin : MonoBehaviour
         }
     }
 
-    public void throwFish()
+    public void throwFish(bool isTerrorist)
     {
         animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
-        FishManager.Instance.createPrefabAtPosition(transform.position + new Vector3(0, 1,0), false);
+        FishManager.Instance.createPrefabAtPosition(transform.position + new Vector3(0, 1,0), isTerrorist);
     }}

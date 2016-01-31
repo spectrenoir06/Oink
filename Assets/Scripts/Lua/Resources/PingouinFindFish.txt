@@ -18,7 +18,7 @@ end
 function onFindFish(npc, fish)
 	foundFish = true;
 	Fish = fish;
-	npc:playAnimation("dance&eat");
+	npc:playAnimation("eat");
 	npc:stopWalking();
 end
 
