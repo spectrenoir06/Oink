@@ -8,7 +8,13 @@ public class Fish : MonoBehaviour {
     private GameObject prefab;
 
     private GameObject explosion;
-
+    
+    private bool availableForPickup;
+    public bool AvailableForPickup
+    {
+        get { return availableForPickup; }
+        set { availableForPickup = value; }
+    }
     private PingouinAIState deadPingouin = null;
 
     public bool IsDangerous
@@ -24,7 +30,10 @@ public class Fish : MonoBehaviour {
         }
     }
 
-
+    void Awake()
+    {
+        AvailableForPickup = true;
+    }
 
     // Use this for initialization
     void Start () {
