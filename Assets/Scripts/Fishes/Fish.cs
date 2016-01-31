@@ -41,8 +41,11 @@ public class Fish : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(deadPingouin != null)
+        if (deadPingouin != null)
+        {
             deadPingouin.die();
+            FishManager.Instance.destroyFish(this);
+        }
     }
 
     public void eat(PingouinAIState pingouinAIState)
@@ -52,7 +55,8 @@ public class Fish : MonoBehaviour {
             deadPingouin = pingouinAIState;
             explose();
         }
-        FishManager.Instance.destroyFish(this);
+        else
+            FishManager.Instance.destroyFish(this);
     }
 
     private void explose()

@@ -37,15 +37,15 @@ public class FishManager : MonoBehaviour
         fishPrefab = Resources.Load("fish 1") as GameObject;
     }
 
-    public void createPrefabAtPosition(Vector3 position)
+    public void createPrefabAtPosition(Vector3 position, bool isTerrorist)
     {
-        createPrefabAtPosition(position, Quaternion.identity);
+        createPrefabAtPosition(position, Quaternion.identity, isTerrorist);
     }
 
-    public void createPrefabAtPosition(Vector3 position, Quaternion rotation)
+    public void createPrefabAtPosition(Vector3 position, Quaternion rotation, bool isTerrorist)
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
-        newFish.GetComponent<Fish>().IsDangerous = true;
+        newFish.GetComponent<Fish>().IsDangerous = isTerrorist;
         fishList.Add(newFish.GetComponent<Fish>());
         Vector3 direction = GameObject.FindGameObjectWithTag("Banquise").transform.position - newFish.transform.position;
         direction.Normalize();
@@ -90,6 +90,27 @@ public class FishManager : MonoBehaviour
         closestFish.AvailableForPickup = false;
         return closestFish;
         
+    }
+
+    public Fish getClosestSafeFish(Vector3 origin)
+    {
+        float closestDistance = 99999;
+        Fish closestFish = null;
+        foreach (Fish f in fishList)
+        {
+            if (!f.AvailableForPickup)
+                continue;
+
+            float distance = Vector3.Distance(f.transform.position, origin);
+            if (distance < closestDistance && !f.IsDangerous)
+            {
+                closestDistance = distance;
+                closestFish = f;
+            }
+        }
+        closestFish.AvailableForPickup = false;
+        return closestFish;
+
     }
 
     public void destroyFish(Fish f)

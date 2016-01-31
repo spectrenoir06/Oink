@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class NPCAIController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class NPCAIController : MonoBehaviour
 
     [SerializeField]
     private Pingouin pingouin;
+    
+    private bool ritualEat;
+    private bool ritualDive;
+    private bool comestibleFishes;
     
     StateMachine<string, NPCAIState> stateMachine;
     private string iaScript;
@@ -36,6 +41,13 @@ public class NPCAIController : MonoBehaviour
             stateMachine.registerState(text.name, new PingouinAIState(this, transform, lua, text));
         }
         stateMachine.initCurrentState(startState.name);
+    }
+
+    public void init(bool ritualDiner, bool ritualDiver, bool dropGoodFishes)
+    {
+        ritualEat = ritualDiner;
+        ritualDive = ritualDiver;
+        comestibleFishes = dropGoodFishes;
     }
 
     void Update()
@@ -81,18 +93,29 @@ public class NPCAIController : MonoBehaviour
   
     public void playAnimation(string name)
     {
-        if (name == "dance&eat")
-            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenEat);
-        else if (name == "eat")
-            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Eat);
-        else if(name == "dance&dive")
-            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
+        if (name == "eat")
+        {
+            if(ritualEat)
+                animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenEat);
+            else
+                animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Eat);
+        }
         else if (name == "dive")
-            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
+        {
+            if (ritualDive)
+                animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
+            else if (name == "dive")
+                animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
+        }
     }
 
     public void onBorderBanquise()
     {
         (stateMachine.CurrentState as PingouinAIState).onBorderBanquise();
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }
