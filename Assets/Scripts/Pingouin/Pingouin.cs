@@ -28,15 +28,6 @@ public class Pingouin : MonoBehaviour
         marker.SetActive(currentMark);
         banquise = GameObject.FindGameObjectWithTag("Banquise");
     }
-    
-    IEnumerator popFish()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(1);
-            throwFish();
-        }
-    }
 
     void Update()
     {

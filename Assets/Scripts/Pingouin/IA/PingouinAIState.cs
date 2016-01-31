@@ -95,4 +95,9 @@ public class PingouinAIState : NPCAIState
     {
         controller.playAnimation(name);
     }
+
+    public void die()
+    {
+
+    }
 }
