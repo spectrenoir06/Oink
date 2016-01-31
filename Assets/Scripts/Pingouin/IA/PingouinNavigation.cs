@@ -49,8 +49,11 @@ public class PingouinNavigation : MonoBehaviour
     {
         if(collision.collider.tag == "Banquise")
         {
-            jumpRequested = false;
-            ia.notifytouchGround();
+            if(jumpRequested)
+            {
+                jumpRequested = false;
+                ia.notifytouchGround();
+            }
         }
 		if(collision.collider.tag == "Destroy_Zone")
 		{

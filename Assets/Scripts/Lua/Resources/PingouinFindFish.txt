@@ -22,8 +22,7 @@ function onFindFish(npc, fish)
 end
 
 function onAnimEnd(npc)
-	Debug.Log("ANIM END");
-	if Fish then
+	if foundFish then
 		Fish:eat();
 	end
 	npc:changeState("PingouinWalk");
