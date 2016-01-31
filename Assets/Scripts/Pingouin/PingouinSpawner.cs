@@ -58,7 +58,6 @@ public class PingouinSpawner : MonoBehaviour
 
         if(isTerrorist)
         {
-            Debug.Log("SPAWNING TERRORIST");
             ia.init(false, false, false);
             terrorist = go;
         }

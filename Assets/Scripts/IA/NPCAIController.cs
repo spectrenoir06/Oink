@@ -62,7 +62,7 @@ public class NPCAIController : MonoBehaviour
         ritualEat = ritualDiner;
         ritualDive = ritualDiver;
         comestibleFishes = dropGoodFishes;
-        debugCube.SetActive(!comestibleFishes);
+        //debugCube.SetActive(!comestibleFishes);
     }
 
     void Update()
