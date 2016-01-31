@@ -45,13 +45,13 @@ public class Button : MonoBehaviour {
             if (hits[i].transform == gameObject.transform)
             {
                 animator.SetBool("in", true);
-                b_touchButton = true;
-
+ 
                 switch (buttonType)
                 {
                     case Enum_ButtonType.PlayGame:
                         if (Input.GetKeyUp(KeyCode.Mouse0) && manager.getAppliStateMachine().CurrentstateKey != Enum_AppliStateKey.Game)
                         {
+                            b_touchButton = true;
                             manager.OnClickGameButton();
                             audioSource.Play();
                             Debug.Log("Play button clicked");
@@ -91,7 +91,7 @@ public class Button : MonoBehaviour {
             }
         }
 
-        if (!b_touchButton)
+        if (b_touchButton)
             animator.SetBool("in", false);
     }
 }
