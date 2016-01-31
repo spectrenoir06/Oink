@@ -114,7 +114,7 @@ GameObject:
   - 199: {fileID: 19900012}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: CFX2_Splash_Drops
+  m_Name: plouf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

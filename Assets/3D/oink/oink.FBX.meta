@@ -12,6 +12,13 @@ ModelImporter:
     100008: "Bo\xEEte004"
     100010: "Bo\xEEte006"
     100012: "Bo\xEEte007"
+    100014: "Bo\xEEte008"
+    100016: "Bo\xEEte009"
+    100018: "Bo\xEEte010"
+    100020: "Bo\xEEte011"
+    100022: "Bo\xEEte012"
+    100024: "Bo\xEEte013"
+    100026: "Bo\xEEte014"
     400000: //RootNode
     400002: "Bo\xEEte001"
     400004: "Bo\xEEte002"
@@ -19,6 +26,13 @@ ModelImporter:
     400008: "Bo\xEEte004"
     400010: "Bo\xEEte006"
     400012: "Bo\xEEte007"
+    400014: "Bo\xEEte008"
+    400016: "Bo\xEEte009"
+    400018: "Bo\xEEte010"
+    400020: "Bo\xEEte011"
+    400022: "Bo\xEEte012"
+    400024: "Bo\xEEte013"
+    400026: "Bo\xEEte014"
     2300000: //RootNode
     2300002: "Bo\xEEte001"
     2300004: "Bo\xEEte002"
@@ -26,6 +40,13 @@ ModelImporter:
     2300008: "Bo\xEEte004"
     2300010: "Bo\xEEte006"
     2300012: "Bo\xEEte007"
+    2300014: "Bo\xEEte008"
+    2300016: "Bo\xEEte009"
+    2300018: "Bo\xEEte010"
+    2300020: "Bo\xEEte011"
+    2300022: "Bo\xEEte012"
+    2300024: "Bo\xEEte013"
+    2300026: "Bo\xEEte014"
     3300000: //RootNode
     3300002: "Bo\xEEte001"
     3300004: "Bo\xEEte002"
@@ -33,12 +54,26 @@ ModelImporter:
     3300008: "Bo\xEEte004"
     3300010: "Bo\xEEte006"
     3300012: "Bo\xEEte007"
+    3300014: "Bo\xEEte008"
+    3300016: "Bo\xEEte009"
+    3300018: "Bo\xEEte010"
+    3300020: "Bo\xEEte011"
+    3300022: "Bo\xEEte012"
+    3300024: "Bo\xEEte013"
+    3300026: "Bo\xEEte014"
     4300000: "Bo\xEEte004"
     4300002: "Bo\xEEte001"
     4300004: "Bo\xEEte002"
     4300006: "Bo\xEEte003"
     4300008: "Bo\xEEte006"
     4300010: "Bo\xEEte007"
+    4300012: "Bo\xEEte008"
+    4300014: "Bo\xEEte009"
+    4300016: "Bo\xEEte010"
+    4300018: "Bo\xEEte011"
+    4300020: "Bo\xEEte012"
+    4300022: "Bo\xEEte013"
+    4300024: "Bo\xEEte014"
     7400000: oink
     9500000: //RootNode
   materials:
@@ -100,6 +135,20 @@ ModelImporter:
       - path: "Bo\xEEte006"
         weight: 1
       - path: "Bo\xEEte007"
+        weight: 1
+      - path: "Bo\xEEte008"
+        weight: 1
+      - path: "Bo\xEEte009"
+        weight: 1
+      - path: "Bo\xEEte010"
+        weight: 1
+      - path: "Bo\xEEte011"
+        weight: 1
+      - path: "Bo\xEEte012"
+        weight: 1
+      - path: "Bo\xEEte013"
+        weight: 1
+      - path: "Bo\xEEte014"
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
