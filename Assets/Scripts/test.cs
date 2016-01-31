@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class test : MonoBehaviour {
+public class testEyes : MonoBehaviour {
 
     private Vector3 v3_mousePos = Vector3.zero;
     private Vector3 v3_lookTarget = Vector3.zero;
