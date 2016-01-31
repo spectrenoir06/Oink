@@ -32,6 +32,8 @@ public class PingouinNavigation : MonoBehaviour
     public void setWalkingState(bool isWalking)
     {
         walking = isWalking;
+        if (!walking)
+            mRigidbody.velocity = Vector3.zero;
     }
 
     public void jump()
@@ -42,7 +44,28 @@ public class PingouinNavigation : MonoBehaviour
 
     private void goForward(float fspeed)
     {
-        mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * speed);
+        mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * fspeed);
+    }
+
+    public void setSpeed(float f)
+    {
+        speed = f;
+    }
+
+    public void turnAround(float degree)
+    {
+        transform.RotateAround(transform.position, transform.up, degree);
+    }
+
+    public void turnAround()
+    {
+        turnAround(180);
+    }
+
+    public void randomizeDirection()
+    {
+        float randAngle = Random.Range(10, 360);
+        turnAround(randAngle);
     }
 
     void OnCollisionEnter(Collision collision)

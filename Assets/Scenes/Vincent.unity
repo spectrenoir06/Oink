@@ -279,6 +279,10 @@ Prefab:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 11441412, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
+      propertyPath: maxPinguin
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
   m_IsPrefabParent: 0

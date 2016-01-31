@@ -3,6 +3,7 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
+	npc:randomizeDirection();
 	npc:startWalking();
 	rand = npc:random(1.0, 5.0); 
 	npc:wait(rand, "throwFish");
@@ -19,4 +20,8 @@ end
 
 function seekFish(npc)
 	npc:changeState("PingouinFindFish");
+end
+
+function onBorderBanquise(npc)
+	npc:turnAround();
 end

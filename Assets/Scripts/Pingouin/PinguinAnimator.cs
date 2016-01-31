@@ -43,8 +43,6 @@ public class PinguinAnimator : MonoBehaviour
 
     public void playAnimation(newStateAnimationPinguin state)
     {
-        if (currentState != StateAnimationPinguin.Walk)
-            return;
         switch (state)
         {
             case newStateAnimationPinguin.Throw:

@@ -3,19 +3,64 @@ using System.Collections;
 
 public class Fish : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    private bool isDangerous = false;
+
+    private GameObject prefab;
+
+    private GameObject explosion;
+    
+    private bool availableForPickup;
+    public bool AvailableForPickup
+    {
+        get { return availableForPickup; }
+        set { availableForPickup = value; }
+    }
+    private PingouinAIState deadPingouin = null;
+
+    public bool IsDangerous
+    {
+        get
+        {
+            return isDangerous;
+        }
+
+        set
+        {
+            isDangerous = value;
+        }
+    }
+
+    void Awake()
+    {
+        AvailableForPickup = true;
+    }
+
+    // Use this for initialization
+    void Start () {
+    }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+	    if(deadPingouin != null)
+            deadPingouin.die();
+    }
 
-    public void eat()
+    public void eat(PingouinAIState pingouinAIState)
     {
+        if (IsDangerous)
+        {
+            deadPingouin = pingouinAIState;
+            explose();
+        }
         FishManager.Instance.destroyFish(this);
+    }
+
+    private void explose()
+    {
+        prefab = Resources.Load("Explosion") as GameObject;
+        explosion = Instantiate(prefab) as GameObject;
+        explosion.transform.position = transform.position;
+        explosion.GetComponent<ParticleSystem>().Play();
     }
 
     void OnCollisionEnter(Collision collision)

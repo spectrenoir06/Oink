@@ -6,10 +6,8 @@ public class UIObjectsContainer : MonoBehaviour {
     public GameObject go_gameButton;
     public GameObject go_creditButton;
     public GameObject go_quitButton;
-    public GameObject go_backButton;
+
     public GameObject go_creditText;
-    public GameObject go_ruleButton;
-    public GameObject go_quitGameButton;
 
     private static UIObjectsContainer instance = null;
 

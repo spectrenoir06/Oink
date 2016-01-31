@@ -1,7 +1,0 @@
-﻿import 'System'
-import 'UnityEngine'
-import 'Assembly-CSharp'
-
-function enter(npc)
-	Debug.Log("POUET");
-end
