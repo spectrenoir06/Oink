@@ -56,7 +56,6 @@ public class PingouinAIState : NPCAIState
         lua.call(functioName, this);
     }
 
-
     public void jump()
     {
         var lookPos = GameObject.FindGameObjectWithTag("Banquise").transform.position - transform.position;
@@ -64,9 +63,6 @@ public class PingouinAIState : NPCAIState
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = rotation;
         navigation.jump();
-        /*transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, transform.up);
-        navigation.jump();
-        transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);*/
     }
 
     public void notifyEndWait()

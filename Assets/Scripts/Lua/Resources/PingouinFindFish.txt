@@ -23,16 +23,19 @@ function onFindFish(npc, fish)
 end
 
 function onAnimEnd(npc)
+	continue = false;
 	if foundFish then
-		Fish:eat(npc);
+		continue = Fish:eat(npc);
 		npc:incrementFishCount();
 	end
 	
-	if npc:getFishCount() <= 3 then
-		npc:changeState("PingouinWalk");
-	end
-	if npc:getFishCount() > 3 then
-		npc:changeState("PingouinDive");
+	if continue then
+		if npc:getFishCount() <= 3 then
+			npc:changeState("PingouinWalk");
+		end
+		if npc:getFishCount() > 3 then
+			npc:changeState("PingouinDive");
+		end
 	end
 end
 
