@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Fish : MonoBehaviour {
 
+    [SerializeField]
+    private AudioClip explosionAudio;
+
     private bool isDangerous = false;
 
     private GameObject prefab;
@@ -10,6 +13,7 @@ public class Fish : MonoBehaviour {
     private GameObject explosion;
     
     private bool availableForPickup;
+
     public bool AvailableForPickup
     {
         get { return availableForPickup; }
@@ -65,6 +69,9 @@ public class Fish : MonoBehaviour {
         explosion = Instantiate(prefab) as GameObject;
         explosion.transform.position = transform.position;
         explosion.GetComponent<ParticleSystem>().Play();
+        explosion.AddComponent<AudioSource>();
+        explosion.GetComponent<AudioSource>().clip = explosionAudio;
+        explosion.GetComponent<AudioSource>().Play();
     }
 
     void OnCollisionEnter(Collision collision)

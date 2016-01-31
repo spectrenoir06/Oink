@@ -13,6 +13,12 @@ public class Pingouin : MonoBehaviour
     private NPCAIController iaController;
 
     [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip[] audioClips = new AudioClip[2];
+
+    [SerializeField]
     private GameObject marker;
 
     private bool currentMark;
@@ -27,6 +33,21 @@ public class Pingouin : MonoBehaviour
         currentMark = false;
         marker.SetActive(currentMark);
         banquise = GameObject.FindGameObjectWithTag("Banquise");
+
+        audioSource.clip = audioClips[0];
+
+        StartCoroutine(playOink());
+    }
+
+    int songId = 1;
+    IEnumerator playOink()
+    {
+        while(true)
+        {
+            audioSource.clip = audioClips[songId^= songId];
+            yield return new WaitForSeconds(Random.Range(1,50));
+            audioSource.Play();
+        }
     }
 
     void Update()
