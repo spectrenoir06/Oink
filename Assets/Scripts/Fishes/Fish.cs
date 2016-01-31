@@ -9,6 +9,13 @@ public class Fish : MonoBehaviour {
 
     private GameObject explosion;
 
+    private bool availableForPickup;
+    public bool AvailableForPickup
+    {
+        get { return availableForPickup; }
+        set { availableForPickup = value; }
+    }
+
     public bool IsDangerous
     {
         get
@@ -22,7 +29,10 @@ public class Fish : MonoBehaviour {
         }
     }
 
-
+    void Awake()
+    {
+        AvailableForPickup = true;
+    }
 
     // Use this for initialization
     void Start () {

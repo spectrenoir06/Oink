@@ -4,6 +4,7 @@ using System.Collections;
 public class PingouinAIState : NPCAIState
 {
     PingouinNavigation navigation;
+    Fish fish;
 
     private int fishEaten = 0;
 
@@ -23,15 +24,14 @@ public class PingouinAIState : NPCAIState
         fishEaten++;
     }
 
-    public void goToClosestFish()
+    public void goToMyFish()
     {
-        Vector3 goal = FishManager.Instance.getClosestFishPosition(transform.position);
+        Vector3 goal = fish.transform.position;
         navigation.setGoalPosition(goal);
 		float dist = Vector3.Distance(goal, transform.position);
-		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
-		if (tmp != null && dist < 1)
+		if (dist < 1)
 		{
-            onFindFish(tmp);
+            onFindFish(fish);
         }
     }
 
@@ -106,6 +106,11 @@ public class PingouinAIState : NPCAIState
     public void playAnimation(string name)
     {
         controller.playAnimation(name);
+    }
+
+    public void findMyFish()
+    {
+        fish = FishManager.Instance.getClosestFish(transform.position);
     }
 
     public void die()

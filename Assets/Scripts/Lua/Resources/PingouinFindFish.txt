@@ -6,12 +6,12 @@ Fish = nil
 foundFish = false;
 
 function enter(npc)
-
+	npc:findMyFish();
 end
 
 function update(npc)
 	if not foundFish then
-		npc:goToClosestFish();
+		npc:goToMyFish();
 	end
 end
 

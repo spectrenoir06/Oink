@@ -77,6 +77,9 @@ public class FishManager : MonoBehaviour
         Fish closestFish = null;
         foreach (Fish f in fishList)
         {
+            if (!f.AvailableForPickup)
+                continue;
+
             float distance = Vector3.Distance(f.transform.position, origin);
             if (distance < closestDistance)
             {
@@ -84,6 +87,7 @@ public class FishManager : MonoBehaviour
                 closestFish = f;
             }
         }
+        closestFish.AvailableForPickup = false;
         return closestFish;
         
     }
