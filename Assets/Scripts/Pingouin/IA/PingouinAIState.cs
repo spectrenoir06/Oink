@@ -113,6 +113,11 @@ public class PingouinAIState : NPCAIState
         fish = FishManager.Instance.getClosestFish(transform.position);
     }
 
+    public void findMySafeFish()
+    {
+        fish = FishManager.Instance.getClosestSafeFish(transform.position);
+    }
+
     public void die()
     {
         controller.die();
