@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class PinguinAnimator : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class PinguinAnimator : MonoBehaviour
         DanceThenDive,
         DanceThenEat
     }
+
+    [SerializeField]
+    private AudioClip ploufAudio;
+
+    [SerializeField]
+    private AudioMixerGroup audioMixer;
 
     [SerializeField]
     private NPCAIController iaController;
@@ -96,5 +103,9 @@ public class PinguinAnimator : MonoBehaviour
         ploufParticles = Instantiate(ploufPrefab) as GameObject;
         ploufParticles.transform.position = transform.position;
         ploufParticles.GetComponent<ParticleSystem>().Play();
+        ploufParticles.AddComponent<AudioSource>();
+        ploufParticles.GetComponent<AudioSource>().clip = ploufAudio;
+        ploufParticles.GetComponent<AudioSource>().outputAudioMixerGroup = audioMixer;
+        ploufParticles.GetComponent<AudioSource>().Play();
     }
 }
