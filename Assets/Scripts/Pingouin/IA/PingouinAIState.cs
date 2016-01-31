@@ -122,4 +122,9 @@ public class PingouinAIState : NPCAIState
     {
         navigation.randomizeDirection();
     }
+    
+    public void setSpeed(float f)
+    {
+        navigation.setSpeed(f);
+    }
 }
