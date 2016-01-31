@@ -55,13 +55,13 @@ public class PinguinAnimator : MonoBehaviour {
         currentState = StateAnimationPinguin.Eat;
         break;
       case newStateAnimationPinguin.DanceThenDive:
-        animator.SetTrigger("Dance");
         animator.SetTrigger("DiveAfterDance");
+        animator.SetTrigger("Dance");
         currentState = StateAnimationPinguin.DanceThenDive;
         break;
       case newStateAnimationPinguin.DanceThenEat:
-        animator.SetTrigger("Dance");
         animator.SetTrigger("EatAfterDance");
+        animator.SetTrigger("Dance");
         currentState = StateAnimationPinguin.DanceThenEat;
         break;
     }

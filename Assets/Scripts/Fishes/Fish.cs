@@ -17,4 +17,13 @@ public class Fish : MonoBehaviour {
     {
         FishManager.Instance.destroyFish(this);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Banquise")
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+    }
 }

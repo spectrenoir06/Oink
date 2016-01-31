@@ -23,7 +23,10 @@ public class PingouinNavigation : MonoBehaviour
 
     public void setGoalPosition(Vector3 goal)
     {
-        transform.LookAt(goal);
+        var lookPos = goal - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = rotation;
     }
 
     public void setWalkingState(bool isWalking)

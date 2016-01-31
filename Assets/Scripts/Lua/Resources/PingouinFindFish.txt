@@ -19,11 +19,12 @@ function onFindFish(npc, fish)
 	foundFish = true;
 	Fish = fish;
 	npc:playAnimation("dance&eat");
-	Debug.Log("POUET POUET");
 end
 
 function onAnimEnd(npc)
-	Debug.Log("POUET POUET");
-	fish:eat();
+	Debug.Log("ANIM END");
+	if Fish then
+		Fish:eat();
+	end
 	npc:changeState("PingouinWalk");
 end

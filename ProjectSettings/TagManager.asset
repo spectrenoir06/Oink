@@ -10,6 +10,7 @@ TagManager:
   - Destroy_Zone
   - FxTemporaire
   - CoroutineManager
+  - BanquiseSpawn
   layers:
   - Default
   - TransparentFX
