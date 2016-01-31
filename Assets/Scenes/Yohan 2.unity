@@ -493,34 +493,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 9523872, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d20660e02065c0a4c8548fc71146e725, type: 2}
-    - target: {fileID: 9515720, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d7124b1817b4c194399c43815d7cf3bc, type: 2}
-    - target: {fileID: 9580274, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f74356ebd1c57742b95d6a870c0ffcd, type: 2}
-    - target: {fileID: 124052, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 181118, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 112070, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11450286, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
   m_IsPrefabParent: 0

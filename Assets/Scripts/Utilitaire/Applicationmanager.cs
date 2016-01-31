@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
 public class Applicationmanager : MonoBehaviour {
 
     private static Applicationmanager instance;
@@ -32,6 +33,9 @@ public class Applicationmanager : MonoBehaviour {
 
     private float f_timer = 0f;
 
+    public AudioClip audioclip;
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
 #region applicationStateMachine
@@ -47,6 +51,8 @@ public class Applicationmanager : MonoBehaviour {
         //initialize the current state
         appliStateMachine.initCurrentState(Enum_AppliStateKey.MenuMain);
 
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = audioclip;
 #endregion applicationStateMachine
 }
 
@@ -63,7 +69,10 @@ public class Applicationmanager : MonoBehaviour {
                 b_waitCredits = false;
 
             if (!b_waitCredits && Input.GetMouseButtonDown(0))
+            {
+                audioSource.Play();
                 appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
+            }
         }
 	}
 
