@@ -9,6 +9,12 @@ public class RotateCamera : MonoBehaviour {
     [SerializeField]
     private int border = 50;
 
+    [SerializeField]
+    private Camera mainCamera;
+
+    [SerializeField]
+    private int scrollWheelSpeed = 10;
+
     // Update is called once per frame
     void Update () {
         float speed = 0;
@@ -19,5 +25,8 @@ public class RotateCamera : MonoBehaviour {
 
         gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.eulerAngles + Vector3.up * speed);
 
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if ((scroll < 0 && mainCamera.fieldOfView < 75) || (scroll > 0 && mainCamera.fieldOfView > 30))
+            mainCamera.fieldOfView -= scroll * scrollWheelSpeed;
     }
 }
