@@ -110,7 +110,7 @@ public class PingouinAIState : NPCAIState
 
     public void die()
     {
-
+        
     }
 
     public void onBorderBanquise()
