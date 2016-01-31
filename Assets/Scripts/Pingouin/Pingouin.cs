@@ -82,5 +82,5 @@ public class Pingouin : MonoBehaviour
     public void throwFish(bool isTerrorist)
     {
         animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
-        FishManager.Instance.createPrefabAtPosition(transform.position + new Vector3(0, 1,0), isTerrorist);
+        FishManager.Instance.createPrefabAtPosition(transform.position + new Vector3(0, 1,0), false);
     }}

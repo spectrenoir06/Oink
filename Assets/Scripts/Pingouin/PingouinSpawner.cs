@@ -46,25 +46,7 @@ public class PingouinSpawner : MonoBehaviour
 
     public void createPrefabAtPosition(Vector3 position, bool isTerrorist)
     { 
-        GameObject go = Instantiate(pingouinPrefab, position, Quaternion.identity) as GameObject;
-        NPCAIController ia = go.GetComponent<NPCAIController>();
-
-        if(isTerrorist)
-        {
-            ia.init(false, false, true);
-        }
-        else
-        {
-            float rand = Random.Range(0, 1);
-            if(rand >= 0.5f)
-            {
-                ia.init(false, true, false);
-            }
-            else
-            {
-                ia.init(true, false, false);
-            }
-        }
+        Instantiate(pingouinPrefab, position, Quaternion.identity);
     }
 
     // Update is called once per frame
