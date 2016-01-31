@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Applicationmanager : MonoBehaviour {
 
     private ApplicationStateMachine appliStateMachine;
-    private InGameStateMachine inGameStateMachine;
+    private InGameStateMachine inGameStateMachine;  //perhaps is useless in the game
 
 
     // Use this for initialization
@@ -25,17 +25,16 @@ public class Applicationmanager : MonoBehaviour {
         appliStateMachine.initCurrentState(Enum_AppliStateKey.MenuMain);
 
 #endregion applicationStateMachine
-
-#region InGameStateMachine
-
-
-#endregion InGameStateMachine
-
-    }
+}
 
     // Update is called once per frame
     void Update () {
         appliStateMachine.update();
+
+        if (appliStateMachine.CurrentstateKey == Enum_AppliStateKey.MenuCredit && Input.GetMouseButtonDown(0))
+        {
+            appliStateMachine.changeState(Enum_AppliStateKey.MenuMain);
+        }
 	}
 
     public void OnClickGameButton()

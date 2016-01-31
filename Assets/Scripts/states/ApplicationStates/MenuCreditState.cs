@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.ImageEffects;
 
 public class MenuCreditState : ApplicationState {
 
-    public List<string> list_creditItems = new List<string>();
-
     private UIObjectsContainer uiObjectsContainer;
+    private Credits credits;
 
     public MenuCreditState()
     {
         uiObjectsContainer = UIObjectsContainer.getInstance();
         if (uiObjectsContainer == null)
             Debug.LogError("ERROR: uiObjectsContainer is null");
+
+        credits = uiObjectsContainer.go_creditText.GetComponent<Credits>();
     }
 
 	// Use this for initialization
@@ -42,6 +44,9 @@ public class MenuCreditState : ApplicationState {
 
         uiObjectsContainer.go_backButton.SetActive(true);
         uiObjectsContainer.go_creditText.SetActive(true);
+
+        Camera.main.gameObject.GetComponent<BlurOptimized>().enabled = true;
+        credits.showCredits(true);
     }
 
     public override void leaveState()
@@ -50,5 +55,9 @@ public class MenuCreditState : ApplicationState {
 
         uiObjectsContainer.go_backButton.SetActive(false);
         uiObjectsContainer.go_creditText.SetActive(false);
+
+        credits.showCredits(false);
+        credits.resetCredits();
+        Camera.main.gameObject.GetComponent<BlurOptimized>().enabled = false;
     }
 }
