@@ -8,13 +8,14 @@ public class Fish : MonoBehaviour {
     private GameObject prefab;
 
     private GameObject explosion;
-
+    
     private bool availableForPickup;
     public bool AvailableForPickup
     {
         get { return availableForPickup; }
         set { availableForPickup = value; }
     }
+    private PingouinAIState deadPingouin = null;
 
     public bool IsDangerous
     {
@@ -40,16 +41,17 @@ public class Fish : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+	    if(deadPingouin != null)
+            deadPingouin.die();
+    }
 
     public void eat(PingouinAIState pingouinAIState)
     {
-        /*if (IsDangerous)
+        if (IsDangerous)
         {
-            pingouinAIState.die();
+            deadPingouin = pingouinAIState;
             explose();
-        }*/
+        }
         FishManager.Instance.destroyFish(this);
     }
 
@@ -57,8 +59,8 @@ public class Fish : MonoBehaviour {
     {
         prefab = Resources.Load("Explosion") as GameObject;
         explosion = Instantiate(prefab) as GameObject;
-        explosion.GetComponent<ParticleSystem>().Stop();
-        explosion.transform.SetParent(transform, true);
+        explosion.transform.position = transform.position;
+        explosion.GetComponent<ParticleSystem>().Play();
     }
 
     void OnCollisionEnter(Collision collision)
