@@ -31,20 +31,11 @@ public class GameState : ApplicationState
     {
         base.enterState(previousState);
 
-        uiObjectsContainer.go_gameButton.SetActive(false);
-        uiObjectsContainer.go_creditButton.SetActive(false);
-        uiObjectsContainer.go_quitButton.SetActive(false);
-        uiObjectsContainer.go_ruleButton.SetActive(false);
         uiObjectsContainer.go_creditText.SetActive(false);
-        uiObjectsContainer.go_backButton.SetActive(false);
-
-        uiObjectsContainer.go_quitGameButton.SetActive(true);
     }
 
     public override void leaveState()
     {
         base.leaveState();
-
-        uiObjectsContainer.go_quitGameButton.SetActive(false);
     }
 }
