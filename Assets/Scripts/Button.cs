@@ -7,7 +7,8 @@ public enum Enum_ButtonType
     Non,
     PlayGame,
     MenuCredit,
-    QuitGame
+    QuitGame,
+    Intro
 }
 
 public class Button : MonoBehaviour {
@@ -61,6 +62,13 @@ public class Button : MonoBehaviour {
                             b_quit = true;
 
                             Debug.Log("Quit button clicked");
+                        }
+
+                        break;
+                    case Enum_ButtonType.Intro:
+                        if (Input.GetKeyUp(KeyCode.Mouse0) && !b_quit)
+                        {
+                            UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
                         }
 
                         break;

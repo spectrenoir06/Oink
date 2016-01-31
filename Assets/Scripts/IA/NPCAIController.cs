@@ -23,6 +23,8 @@ public class NPCAIController : MonoBehaviour
     private bool ritualEat;
     private bool ritualDive;
     private bool comestibleFishes;
+    public bool IsTerrorist
+    { get { return !comestibleFishes; } }
     
     StateMachine<string, NPCAIState> stateMachine;
     private string iaScript;
