@@ -35,11 +35,11 @@ public class Fish : MonoBehaviour {
 
     public void eat(PingouinAIState pingouinAIState)
     {
-        if (IsDangerous)
+        /*if (IsDangerous)
         {
             pingouinAIState.die();
             explose();
-        }
+        }*/
         FishManager.Instance.destroyFish(this);
     }
 
