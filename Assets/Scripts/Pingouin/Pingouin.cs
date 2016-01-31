@@ -10,17 +10,23 @@ public class Pingouin : MonoBehaviour
     private PinguinAnimator animator;
 
     [SerializeField]
+    private NPCAIController iaController;
+
+    [SerializeField]
     private GameObject marker;
 
     private bool currentMark;
 
+    private GameObject banquise;
+
+    private bool isOnBorder;
     // Use this for initialization
     void Start ()
     {
+        isOnBorder = true;
         currentMark = false;
         marker.SetActive(currentMark);
-        //transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, Vector3.right);
-        //StartCoroutine(popFish());
+        banquise = GameObject.FindGameObjectWithTag("Banquise");
     }
     
     IEnumerator popFish()
@@ -34,6 +40,17 @@ public class Pingouin : MonoBehaviour
 
     void Update()
     {
+        if (Vector3.Distance(transform.position, banquise.transform.position) > 12)
+        {
+            if (!isOnBorder)
+            {
+                iaController.onBorderBanquise();
+            }
+            isOnBorder = true;
+        }
+        else
+            isOnBorder = false;
+
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 

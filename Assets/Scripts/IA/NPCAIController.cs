@@ -73,7 +73,7 @@ public class NPCAIController : MonoBehaviour
     {
         pingouin.throwFish();
     }
-
+    
     public void startWalking()
     {
         (stateMachine.CurrentState as PingouinAIState).onAnimEnd();
@@ -83,5 +83,9 @@ public class NPCAIController : MonoBehaviour
     {
         if (name == "dance&eat")
             animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenEat);
+    }
+    public void onBorderBanquise()
+    {
+        Debug.Log("Border POUET");
     }
 }
