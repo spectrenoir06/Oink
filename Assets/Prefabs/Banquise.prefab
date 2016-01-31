@@ -79,7 +79,7 @@ GameObject:
   - 114: {fileID: 11441412}
   m_Layer: 0
   m_Name: PingouinSpawnerRoot
-  m_TagString: Untagged
+  m_TagString: PinguinSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOrbiter: {fileID: 413054}
-  waitBeforeSpawn: 0
-  maxPinguin: 3
+  waitBeforeSpawn: 2
+  maxPinguin: 15
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

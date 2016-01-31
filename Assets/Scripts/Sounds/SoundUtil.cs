@@ -18,7 +18,7 @@ public class SoundUtil : MonoBehaviour {
         source.loop = true;
         SoundsManager.Instance.fadeIn(source);
         source.outputAudioMixerGroup = audioMixerAmbiance;
-        source = SoundsManager.Instance.playMusic("Frozen Pinguin2 loop", transform, 0, 1);
+        source = SoundsManager.Instance.playMusic("Frozen Pinguin loop", transform, 0, 1);
         source.loop = true;
         SoundsManager.Instance.fadeIn(source);
         source.outputAudioMixerGroup = audioMixerMusic;

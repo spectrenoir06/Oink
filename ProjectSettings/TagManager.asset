@@ -12,6 +12,7 @@ TagManager:
   - CoroutineManager
   - BanquiseSpawn
   - RulePanel
+  - PinguinSpawner
   layers:
   - Default
   - TransparentFX

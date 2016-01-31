@@ -10,6 +10,10 @@ public class NPCAIController : MonoBehaviour
     private TextAsset startState;
     [SerializeField]
     private PinguinAnimator animator;
+    [SerializeField]
+    private PingouinSpawner spawner;
+    [SerializeField]
+    private GameObject debugCube;
 
     [SerializeField]
     private List<TextAsset> stateList;
@@ -33,7 +37,12 @@ public class NPCAIController : MonoBehaviour
 
     void Awake()
     {
+        spawner = GameObject.FindGameObjectWithTag("PinguinSpawner").GetComponent<PingouinSpawner>();
+    }
 
+    public void spawnOnDive()
+    {
+        spawner.spawnPinguin(IsTerrorist);
     }
 
     void Start()
@@ -53,6 +62,7 @@ public class NPCAIController : MonoBehaviour
         ritualEat = ritualDiner;
         ritualDive = ritualDiver;
         comestibleFishes = dropGoodFishes;
+        //debugCube.SetActive(!comestibleFishes);
     }
 
     void Update()
@@ -88,8 +98,8 @@ public class NPCAIController : MonoBehaviour
 
     public void throwFish()
     {
-        if (!comestibleFishes && !activated)
-            return;
+        /*if (!comestibleFishes && !activated)
+            return;*/
         pingouin.throwFish(!comestibleFishes);
     }
     

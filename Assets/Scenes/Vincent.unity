@@ -641,6 +641,10 @@ Prefab:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 11441412, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
+      propertyPath: waitBeforeSpawn
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
   m_IsPrefabParent: 0
@@ -685,7 +689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431294, guid: 5f00d13bb7650bb42b0e39fed305ef4a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f00d13bb7650bb42b0e39fed305ef4a, type: 2}

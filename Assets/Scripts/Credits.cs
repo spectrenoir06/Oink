@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
     [SerializeField]
     private GameObject button;
 
-    public float f_speed = 0f;
+    public float f_speed;
 
     private bool b_showCredits = false;
     private Vector3 v3_posInit = new Vector3();

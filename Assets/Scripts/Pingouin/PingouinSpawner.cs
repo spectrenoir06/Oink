@@ -23,7 +23,7 @@ public class PingouinSpawner : MonoBehaviour
         StartCoroutine(initLevel());
     }
 
-    private void spawnPinguin(bool isTerrorist = false)
+    public void spawnPinguin(bool isTerrorist = false)
     {
         StartCoroutine(spawnCoroutine(isTerrorist));
     }
