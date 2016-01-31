@@ -7,5 +7,10 @@ function enter(npc)
 end
 
 function onBorderBanquise(npc)
-	npc:playAnimation("dive");
+	npc:stopWalking();
+	npc:playAnimation("dance&dive");
+end
+
+function onAnimEnd(npc)
+	npc:startWalking();
 end

@@ -28,13 +28,12 @@ function onAnimEnd(npc)
 		npc:incrementFishCount();
 	end
 	
-	if npc:getFishCount() <= 1 then
+	if npc:getFishCount() <= 0 then
 		npc:changeState("PingouinWalk");
 	end
-	if npc:getFishCount() > 1 then
+	if npc:getFishCount() > 0 then
 		npc:changeState("PingouinDive");
 	end
-	npc:randomizeDirection();
 end
 
 function onBorderBanquise(npc)

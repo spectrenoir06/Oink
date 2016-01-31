@@ -43,7 +43,6 @@ public class PinguinAnimator : MonoBehaviour
 
     public void playAnimation(newStateAnimationPinguin state)
     {
-        Debug.Log(state.ToString());
         switch (state)
         {
             case newStateAnimationPinguin.Throw:
