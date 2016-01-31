@@ -36,15 +36,15 @@ public class PingouinAIState : NPCAIState
 
     }
 
-	public void wait(float time){
-		//StartCoroutine(waitCoroutine(time));
+	public void wait(float time, string functioName){
+        CoroutineManager.Instance.startCoroutine(waitCoroutine(time, functioName));
 	}
 
-	private IEnumerable waitCoroutine(float time)
+	private IEnumerator waitCoroutine(float time, string functioName)
 	{
 		yield return new WaitForSeconds(time);
-		notifyEndWait();
-	}
+        lua.call(functioName, this);
+    }
 
 
     public void jump()
@@ -71,5 +71,20 @@ public class PingouinAIState : NPCAIState
     public void startWalking()
     {
         navigation.setWalkingState(true);
+    }
+
+    public void throwFish()
+    {
+        controller.throwFish();
+    }
+
+    public float random(float a, float b)
+    {
+        return Random.Range(a, b);
+    }
+
+    public void onFindFish(int count)
+    {
+        lua.call("onFindFish", this, count);
     }
 }

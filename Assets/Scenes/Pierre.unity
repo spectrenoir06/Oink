@@ -207,6 +207,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &182941093 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 165008, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+  m_PrefabInternal: {fileID: 1881804106}
 --- !u!1001 &985209471
 Prefab:
   m_ObjectHideFlags: 0
@@ -329,7 +333,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1001 &1972280060
+--- !u!1001 &1881804106
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -368,6 +372,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
+      propertyPath: marker
+      value: 
+      objectReference: {fileID: 182941093}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   m_IsPrefabParent: 0

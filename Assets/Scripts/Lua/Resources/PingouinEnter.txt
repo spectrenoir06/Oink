@@ -12,7 +12,7 @@ function update(npc)
 end
 
 function onTouchGround(npc)
-	npc:changeState("PingouinFindFish");
+	npc:changeState("PingouinWalk");
 end
 
 function leave(npc)
