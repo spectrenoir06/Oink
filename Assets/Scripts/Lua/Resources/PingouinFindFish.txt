@@ -2,14 +2,28 @@
 import 'UnityEngine'
 import 'Assembly-CSharp'
 
+Fish = nil
+foundFish = false;
+
 function enter(npc)
 
 end
 
 function update(npc)
-	npc:goToClosestFish();
+	if not foundFish then
+		npc:goToClosestFish();
+	end
 end
 
-function onFindFish(npc, count)
-	
+function onFindFish(npc, fish)
+	foundFish = true;
+	Fish = fish;
+	npc:playAnimation("dance&eat");
+	Debug.Log("POUET POUET");
+end
+
+function onAnimEnd(npc)
+	Debug.Log("POUET POUET");
+	fish:eat();
+	npc:changeState("PingouinWalk");
 end

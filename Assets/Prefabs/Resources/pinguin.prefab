@@ -725,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startState: {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
+  animator: {fileID: 11458874}
   stateList:
   - {fileID: 4900000, guid: 14a293171a559da41a98a64d5ada0808, type: 3}
   - {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}

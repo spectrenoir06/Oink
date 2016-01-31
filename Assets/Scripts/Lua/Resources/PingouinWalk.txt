@@ -14,7 +14,7 @@ end
 
 function throwFish(npc)
 	npc:throwFish();
-	npc:wait(10, "seekFish");
+	npc:wait(2, "seekFish");
 end
 
 function seekFish(npc)

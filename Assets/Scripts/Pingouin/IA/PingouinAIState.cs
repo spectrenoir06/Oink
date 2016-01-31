@@ -20,10 +20,8 @@ public class PingouinAIState : NPCAIState
 		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
 		if (tmp != null && dist < 1)
 		{
-			Debug.Log (tmp);
-			tmp.eat();
-		}
-		// Debug.Log (dist);
+            onFindFish(tmp);
+        }
     }
 
     public void leaveAndWiggle()
@@ -83,8 +81,18 @@ public class PingouinAIState : NPCAIState
         return Random.Range(a, b);
     }
 
-    public void onFindFish(int count)
+    public void onFindFish(Fish f)
     {
-        lua.call("onFindFish", this, count);
+        lua.call("onFindFish", this, f);
+    }
+
+    public void onAnimEnd()
+    {
+        lua.call("onAnimEnd", this);
+    }
+
+    public void playAnimation(string name)
+    {
+        controller.playAnimation(name);
     }
 }

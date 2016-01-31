@@ -275,14 +275,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 11412218, guid: 874e9482c90711749bcbe1993b0a1fcb, type: 2}
-      propertyPath: worldProbe
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11412218, guid: 874e9482c90711749bcbe1993b0a1fcb, type: 2}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 874e9482c90711749bcbe1993b0a1fcb, type: 2}
   m_IsPrefabParent: 0
@@ -360,7 +352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!1 &904801791 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 118142, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
@@ -623,7 +615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441412, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
       propertyPath: maxPinguin
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
