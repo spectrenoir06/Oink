@@ -83,7 +83,7 @@ public class NPCAIController : MonoBehaviour
 
     public void throwFish()
     {
-        pingouin.throwFish();
+        pingouin.throwFish(!comestibleFishes);
     }
     
     public void startWalking()
@@ -104,7 +104,7 @@ public class NPCAIController : MonoBehaviour
         {
             if (ritualDive)
                 animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
-            else if (name == "dive")
+            else
                 animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
         }
     }
