@@ -19,11 +19,21 @@ function onFindFish(npc, fish)
 	foundFish = true;
 	Fish = fish;
 	npc:playAnimation("dance&eat");
-	Debug.Log("POUET POUET");
 end
 
 function onAnimEnd(npc)
-	Debug.Log("POUET POUET");
-	fish:eat();
+	if foundFish then
+		Fish:eat();
+		npc.fishEaten = npc.fishEaten + 1;
+	end
 	npc:changeState("PingouinWalk");
+	npc:randomizeDirection();
+end
+
+function onBorderBanquise(npc)
+	if npc.fishEaten <= 3 then
+		npc:turnAround();
+	else
+		npc:playAnimation("dive");
+	end
 end

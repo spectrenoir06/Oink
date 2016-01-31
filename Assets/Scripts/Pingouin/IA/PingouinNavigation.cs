@@ -23,7 +23,10 @@ public class PingouinNavigation : MonoBehaviour
 
     public void setGoalPosition(Vector3 goal)
     {
-        transform.LookAt(goal);
+        var lookPos = goal - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = rotation;
     }
 
     public void setWalkingState(bool isWalking)
@@ -42,12 +45,31 @@ public class PingouinNavigation : MonoBehaviour
         mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * speed);
     }
 
+    public void turnAround(float degree)
+    {
+        transform.RotateAround(transform.position, transform.up, degree);
+    }
+
+    public void turnAround()
+    {
+        turnAround(180);
+    }
+
+    public void randomizeDirection()
+    {
+        float randAngle = Random.Range(10, 360);
+        turnAround(randAngle);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Banquise")
         {
-            jumpRequested = false;
-            ia.notifytouchGround();
+            if(jumpRequested)
+            {
+                jumpRequested = false;
+                ia.notifytouchGround();
+            }
         }
 		if(collision.collider.tag == "Destroy_Zone")
 		{

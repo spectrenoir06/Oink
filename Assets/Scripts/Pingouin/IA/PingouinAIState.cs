@@ -5,6 +5,8 @@ public class PingouinAIState : NPCAIState
 {
     PingouinNavigation navigation;
 
+    public int fishEaten = 0;
+
     public PingouinAIState(NPCAIController controller, Transform transform, LuaEnvironnement luaEnvironnement, TextAsset script):
         base(controller, transform, luaEnvironnement, script)
     {
@@ -18,20 +20,15 @@ public class PingouinAIState : NPCAIState
         navigation.setWalkingState(true);
 		float dist = Vector3.Distance(goal, transform.position);
 		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
-		if (tmp != null && dist < 1)
+		if (tmp != null && dist < 3)
 		{
             onFindFish(tmp);
         }
     }
 
-    public void leaveAndWiggle()
+    public void turnAround()
     {
-        
-    }
-
-    public void leave()
-    {
-
+        navigation.turnAround();
     }
 
 	public void wait(float time, string functioName){
@@ -47,11 +44,17 @@ public class PingouinAIState : NPCAIState
 
     public void jump()
     {
-        transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform);
+        var lookPos = GameObject.FindGameObjectWithTag("Banquise").transform.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = rotation;
         navigation.jump();
+        /*transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, transform.up);
+        navigation.jump();
+        transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);*/
     }
 
-	public void notifyEndWait()
+    public void notifyEndWait()
 	{
 		lua.call("onWaitEnd", this);
 	}
@@ -99,5 +102,15 @@ public class PingouinAIState : NPCAIState
     public void die()
     {
 
+    }
+
+    public void onBorderBanquise()
+    {
+        lua.call("onBorderBanquise", this);
+    }
+
+    public void randomizeDirection()
+    {
+        navigation.randomizeDirection();
     }
 }

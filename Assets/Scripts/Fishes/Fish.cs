@@ -53,4 +53,13 @@ public class Fish : MonoBehaviour {
     {
         explosion.GetComponent<ParticleSystem>().Play();
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Banquise")
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+    }
 }
