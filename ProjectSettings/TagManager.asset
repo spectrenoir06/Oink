@@ -7,6 +7,9 @@ TagManager:
   - FishManager
   - Banquise
   - SoundsManager
+  - Destroy_Zone
+  - FxTemporaire
+  - CoroutineManager
   layers:
   - Default
   - TransparentFX
@@ -17,8 +20,8 @@ TagManager:
   - 
   - 
   - Sun
-  - 
-  - 
+  - Pinguin
+  - Fish
   - 
   - 
   - 

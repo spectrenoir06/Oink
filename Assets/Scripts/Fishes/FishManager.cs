@@ -35,7 +35,6 @@ public class FishManager : MonoBehaviour
             instance = this;
 
         fishPrefab = Resources.Load("fish 1") as GameObject;
-        createPrefabAtPosition(transform.position);
     }
 
     public void createPrefabAtPosition(Vector3 position)
@@ -47,6 +46,9 @@ public class FishManager : MonoBehaviour
     {
         GameObject newFish = Instantiate(fishPrefab, position, rotation) as GameObject;
         fishList.Add(newFish.GetComponent<Fish>());
+        Vector3 direction = GameObject.FindGameObjectWithTag("Banquise").transform.position - newFish.transform.position;
+        direction.Normalize();
+        newFish.GetComponent<Rigidbody>().velocity = direction * 5;
     }
 
     public Vector3 getClosestFishPosition(Vector3 origin)
@@ -66,5 +68,28 @@ public class FishManager : MonoBehaviour
             return closestFish.transform.position;
         else
             return origin;
+    }
+
+    public Fish getClosestFish(Vector3 origin)
+    {
+        float closestDistance = 99999;
+        Fish closestFish = null;
+        foreach (Fish f in fishList)
+        {
+            float distance = Vector3.Distance(f.transform.position, origin);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestFish = f;
+            }
+        }
+        return closestFish;
+        
+    }
+
+    public void destroyFish(Fish f)
+    {
+        fishList.Remove(f);
+        Destroy(f.gameObject);
     }
 }

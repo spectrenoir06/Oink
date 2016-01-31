@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 444050}
   - 33: {fileID: 3333000}
   - 23: {fileID: 2394820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: feetLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 404292}
   - 33: {fileID: 3380146}
   - 23: {fileID: 2362864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouthUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 54: {fileID: 5451446}
   - 136: {fileID: 13663156}
   - 114: {fileID: 11403904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pinguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - 4: {fileID: 452264}
   - 33: {fileID: 3379090}
   - 23: {fileID: 2381028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: feetRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,8 +83,26 @@ GameObject:
   - 23: {fileID: 2331232}
   - 95: {fileID: 9582770}
   - 114: {fileID: 11458874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pinguin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &165008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 438028}
+  - 33: {fileID: 3346020}
+  - 136: {fileID: 13628980}
+  - 23: {fileID: 2313362}
+  m_Layer: 9
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +118,7 @@ GameObject:
   - 4: {fileID: 496098}
   - 33: {fileID: 3333872}
   - 23: {fileID: 2356526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mouthDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +135,7 @@ GameObject:
   - 4: {fileID: 494708}
   - 33: {fileID: 3311968}
   - 23: {fileID: 2302260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +152,7 @@ GameObject:
   - 4: {fileID: 444452}
   - 33: {fileID: 3363774}
   - 23: {fileID: 2327854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +169,7 @@ GameObject:
   - 4: {fileID: 488006}
   - 33: {fileID: 3363786}
   - 23: {fileID: 2325588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +186,7 @@ GameObject:
   - 4: {fileID: 476470}
   - 33: {fileID: 3323308}
   - 23: {fileID: 2313944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,12 +212,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456086}
+  - {fileID: 438028}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &438028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.264, z: 0}
+  m_LocalScale: {x: 0.1, y: 1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 415262}
+  m_RootOrder: 1
 --- !u!4 &444050
 Transform:
   m_ObjectHideFlags: 1
@@ -323,6 +354,32 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2313362
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165008}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -569,6 +626,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165786}
   m_Mesh: {fileID: 4300028, guid: 312ca233de9db764fa651cc1f7d945bd, type: 3}
+--- !u!33 &3346020
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165008}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3363774
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -613,7 +677,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -648,6 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  ia: {fileID: 11424090}
 --- !u!114 &11424090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,11 +724,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5cc5709f6eb8c498e4996042726def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startState: {fileID: 4900000, guid: 8af5b61d6febd904e86cbbf9898a8537, type: 3}
+  startState: {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
   stateList:
   - {fileID: 4900000, guid: 14a293171a559da41a98a64d5ada0808, type: 3}
   - {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}
-  - {fileID: 4900000, guid: 00d54c7541d8b9d448ce0446d157be26, type: 3}
+  - {fileID: 4900000, guid: 8af5b61d6febd904e86cbbf9898a8537, type: 3}
+  pingouin: {fileID: 11466682}
 --- !u!114 &11458874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -689,6 +755,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navigation: {fileID: 11403904}
+  animator: {fileID: 11458874}
+  marker: {fileID: 165008}
+--- !u!136 &13628980
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13663156
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -733,6 +814,22 @@ Prefab:
       propertyPath: stateList.Array.data[3]
       value: 
       objectReference: {fileID: 4900000, guid: f23ee2067f3b909469b33d7e0f78ed6e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ia
+      value: 
+      objectReference: {fileID: 11424090}
+    - target: {fileID: 0}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 11458874}
+    - target: {fileID: 0}
+      propertyPath: pingouin
+      value: 
+      objectReference: {fileID: 11466682}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 134396}

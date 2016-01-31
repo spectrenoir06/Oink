@@ -1,0 +1,19 @@
+﻿import 'System'
+import 'UnityEngine'
+import 'Assembly-CSharp'
+
+function enter(npc)
+	npc:stopWalking();
+	npc:jump();
+end
+
+function update(npc)
+
+end
+
+function onTouchGround(npc)
+	npc:changeState("PingouinWalk");
+end
+
+function leave(npc)
+end

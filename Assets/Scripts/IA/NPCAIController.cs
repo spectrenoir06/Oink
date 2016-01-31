@@ -10,6 +10,9 @@ public class NPCAIController : MonoBehaviour
 
     [SerializeField]
     private List<TextAsset> stateList;
+
+    [SerializeField]
+    private Pingouin pingouin;
     
     StateMachine<string, NPCAIState> stateMachine;
     private string iaScript;
@@ -57,6 +60,16 @@ public class NPCAIController : MonoBehaviour
     public bool hasState(string stateName)
     {
         return stateMachine.hasState(stateName);
+    }
+
+    public void notifytouchGround()
+    {
+        (stateMachine.CurrentState as PingouinAIState).notifytouchGround();
+    }
+
+    public void throwFish()
+    {
+        pingouin.throwFish();
     }
 
   public void startWalking()

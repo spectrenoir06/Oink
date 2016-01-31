@@ -3,9 +3,13 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
-	Debug.Log("POUET");
+
 end
 
 function update(npc)
 	npc:goToClosestFish();
+end
+
+function onFindFish(npc, count)
+	
 end

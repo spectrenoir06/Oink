@@ -12,4 +12,9 @@ public class Fish : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void eat()
+    {
+        FishManager.Instance.destroyFish(this);
+    }
 }
