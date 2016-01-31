@@ -54,8 +54,10 @@ public class Button : MonoBehaviour {
                     case Enum_ButtonType.PlayGame:
                         if (Input.GetKeyUp(KeyCode.Mouse0) && manager.getAppliStateMachine().CurrentstateKey != Enum_AppliStateKey.Game)
                         {
+                            GameObject go = GameObject.FindGameObjectWithTag("RulePanel");
+                            RulesManager rmgr = go.GetComponent<RulesManager>();
+                            rmgr.ruleIn();
                             b_touchButton = true;
-                            manager.OnClickGameButton();
                             audioSource.Play();
                             Debug.Log("Play button clicked");
                         }
