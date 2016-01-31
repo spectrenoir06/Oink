@@ -22,6 +22,11 @@ public class CoroutineManager : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        instance = this;
+    }
+
     public void startCoroutine(IEnumerator coroutine)
     {
         StartCoroutine(coroutine);

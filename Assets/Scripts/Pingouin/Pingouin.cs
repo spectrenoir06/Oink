@@ -87,4 +87,13 @@ public class Pingouin : MonoBehaviour
     {
         animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
         FishManager.Instance.createPrefabAtPosition(transform.position + new Vector3(0, 1,0), isTerrorist);
-    }}
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Bottom")
+        {
+            animator.Dive();
+        }
+    }
+}
