@@ -1097,6 +1097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ploufAudio: {fileID: 0}
+  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 509352836}
   ploufPrefab: {fileID: 0}
@@ -3022,6 +3024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9d076ad62fc8b479f3d497258fc921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerMusic: {fileID: 0}
+  audioMixerAmbiance: {fileID: 0}
 --- !u!114 &858267317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,16 +3176,15 @@ Transform:
 --- !u!114 &918741303
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11488462, guid: 5d55f455316881b4ba66cf1e81b031c8,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918741301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9469c37b36587341b3ac5e72cd778cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 661f1dc41c8abdd4ea2014b7023aa3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
+  sceneName: Intro
 --- !u!23 &918741304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3639,6 +3642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ploufAudio: {fileID: 0}
+  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1153682015}
   ploufPrefab: {fileID: 0}
@@ -5257,6 +5262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ploufAudio: {fileID: 0}
+  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1889798746}
   ploufPrefab: {fileID: 0}
@@ -5459,6 +5466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ploufAudio: {fileID: 0}
+  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 2112869069}
   ploufPrefab: {fileID: 0}

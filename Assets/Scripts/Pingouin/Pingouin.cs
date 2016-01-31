@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Pingouin : MonoBehaviour
@@ -69,7 +70,10 @@ public class Pingouin : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.transform == transform)
         {
-            throwFish(false);
+            if (iaController.IsTerrorist)
+                SceneManager.LoadScene("Victory");
+            else
+                SceneManager.LoadScene("Defeat");
         }
 
         if (Input.GetMouseButtonDown(1) && Physics.Raycast(ray, out hit) && hit.transform == transform)

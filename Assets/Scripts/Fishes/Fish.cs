@@ -52,15 +52,17 @@ public class Fish : MonoBehaviour {
         }
     }
 
-    public void eat(PingouinAIState pingouinAIState)
+    public bool eat(PingouinAIState pingouinAIState)
     {
         if (IsDangerous)
         {
             deadPingouin = pingouinAIState;
             explose();
+            return false;
         }
         else
             FishManager.Instance.destroyFish(this);
+        return true;
     }
 
     private void explose()

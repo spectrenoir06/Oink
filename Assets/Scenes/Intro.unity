@@ -887,11 +887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 177881870}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &177881870
 Animator:
   serializedVersion: 3
@@ -1613,11 +1610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 425686728}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &425686728
 Animator:
   serializedVersion: 3
@@ -2222,7 +2216,7 @@ Transform:
   - {fileID: 726613362}
   - {fileID: 1269107881}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &550349842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,11 +2332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 556607176}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &556607176
 Animator:
   serializedVersion: 3
@@ -2823,11 +2814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 755844826}
-  ploufPrefab: {fileID: 0}
 --- !u!23 &692985379
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3241,11 +3229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 735518745}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &735518745
 Animator:
   serializedVersion: 3
@@ -3652,11 +3637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 805999894}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &805999894
 Animator:
   serializedVersion: 3
@@ -5080,11 +5062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1176695911}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1176695911
 Animator:
   serializedVersion: 3
@@ -5465,11 +5444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1211768190}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1211768190
 Animator:
   serializedVersion: 3
@@ -5914,11 +5890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 755844826}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1345349982
 Animator:
   serializedVersion: 3
@@ -6107,11 +6080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1415493061}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1415493061
 Animator:
   serializedVersion: 3
@@ -9433,8 +9403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9d076ad62fc8b479f3d497258fc921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixerMusic: {fileID: 0}
-  audioMixerAmbiance: {fileID: 0}
 --- !u!114 &1892836829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9600,11 +9568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1950143179}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1950143179
 Animator:
   serializedVersion: 3
@@ -9710,11 +9675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa756f624d89b9f4cb954baf9469cb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ploufAudio: {fileID: 0}
-  audioMixer: {fileID: 0}
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1971252554}
-  ploufPrefab: {fileID: 0}
 --- !u!95 &1971252554
 Animator:
   serializedVersion: 3

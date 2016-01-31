@@ -16,10 +16,15 @@ public class NPCAIController : MonoBehaviour
 
     [SerializeField]
     private Pingouin pingouin;
-    
+
+    private bool activated;
+    public bool Activated
+    { set { activated = value; } }
     private bool ritualEat;
     private bool ritualDive;
     private bool comestibleFishes;
+    public bool IsTerrorist
+    { get { return !comestibleFishes; } }
     
     StateMachine<string, NPCAIState> stateMachine;
     private string iaScript;
@@ -83,6 +88,8 @@ public class NPCAIController : MonoBehaviour
 
     public void throwFish()
     {
+        if (!comestibleFishes && !activated)
+            return;
         pingouin.throwFish(!comestibleFishes);
     }
     
@@ -117,5 +124,13 @@ public class NPCAIController : MonoBehaviour
     public void die()
     {
         Destroy(gameObject);
+    }
+    
+    public Fish findMyFish()
+    {
+        if(comestibleFishes)
+            return FishManager.Instance.getClosestFish(transform.position);
+        else
+            return FishManager.Instance.getClosestSafeFish(transform.position);
     }
 }

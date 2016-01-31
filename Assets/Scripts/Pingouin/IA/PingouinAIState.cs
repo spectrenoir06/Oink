@@ -26,6 +26,12 @@ public class PingouinAIState : NPCAIState
 
     public void goToMyFish()
     {
+        if (!fish)
+        {
+            findMyFish();
+            return;
+        }
+
         Vector3 goal = fish.transform.position;
         navigation.setGoalPosition(goal);
 		float dist = Vector3.Distance(goal, transform.position);
@@ -50,7 +56,6 @@ public class PingouinAIState : NPCAIState
         lua.call(functioName, this);
     }
 
-
     public void jump()
     {
         var lookPos = GameObject.FindGameObjectWithTag("Banquise").transform.position - transform.position;
@@ -58,9 +63,6 @@ public class PingouinAIState : NPCAIState
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = rotation;
         navigation.jump();
-        /*transform.LookAt(GameObject.FindGameObjectWithTag("Banquise").transform, transform.up);
-        navigation.jump();
-        transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);*/
     }
 
     public void notifyEndWait()
@@ -110,12 +112,7 @@ public class PingouinAIState : NPCAIState
 
     public void findMyFish()
     {
-        fish = FishManager.Instance.getClosestFish(transform.position);
-    }
-
-    public void findMySafeFish()
-    {
-        fish = FishManager.Instance.getClosestSafeFish(transform.position);
+        fish = controller.findMyFish();
     }
 
     public void die()

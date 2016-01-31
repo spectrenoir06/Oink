@@ -175,6 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9d076ad62fc8b479f3d497258fc921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerMusic: {fileID: 0}
+  audioMixerAmbiance: {fileID: 0}
 --- !u!1 &446713291
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +283,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441412, guid: a908cf6f77c56ce468189dd06196220a, type: 2}
       propertyPath: maxPinguin
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a908cf6f77c56ce468189dd06196220a, type: 2}

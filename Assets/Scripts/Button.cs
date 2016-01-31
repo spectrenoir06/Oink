@@ -8,7 +8,8 @@ public enum Enum_ButtonType
     Non,
     PlayGame,
     MenuCredit,
-    QuitGame
+    QuitGame,
+    Intro
 }
 
 [RequireComponent(typeof(AudioSource))]
@@ -78,6 +79,13 @@ public class Button : MonoBehaviour {
                             b_quit = true;
                             audioSource.Play();
                             Debug.Log("Quit button clicked");
+                        }
+
+                        break;
+                    case Enum_ButtonType.Intro:
+                        if (Input.GetKeyUp(KeyCode.Mouse0) && !b_quit)
+                        {
+                            UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
                         }
 
                         break;
