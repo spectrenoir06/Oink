@@ -77,4 +77,14 @@ public class PingouinAIState : NPCAIState
     {
         controller.throwFish();
     }
+
+    public float random(float a, float b)
+    {
+        return Random.Range(a, b);
+    }
+
+    public void onFindFish(int count)
+    {
+        lua.call("onFindFish", this, count);
+    }
 }

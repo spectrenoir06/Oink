@@ -4,7 +4,7 @@ import 'Assembly-CSharp'
 
 function enter(npc)
 	npc:startWalking();
-	rand = Random.Range(1,5); 
+	rand = npc:random(1.0, 5.0); 
 	npc:wait(rand, "throwFish");
 end
 
@@ -14,9 +14,9 @@ end
 
 function throwFish(npc)
 	npc:throwFish();
-	npc:wait(3, "throwFish");
+	npc:wait(10, "seekFish");
 end
 
 function seekFish(npc)
-	npc:changeState("PingouiFindFish");
+	npc:changeState("PingouinFindFish");
 end
