@@ -16,6 +16,14 @@ public class PingouinAIState : NPCAIState
         Vector3 goal = FishManager.Instance.getClosestFishPosition(transform.position);
         navigation.setGoalPosition(goal);
         navigation.setWalkingState(true);
+		float dist = Vector3.Distance(goal, transform.position);
+		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
+		if (tmp != null && dist < 1)
+		{
+			Debug.Log (tmp);
+			tmp.eat();
+		}
+		// Debug.Log (dist);
     }
 
     public void leaveAndWiggle()
