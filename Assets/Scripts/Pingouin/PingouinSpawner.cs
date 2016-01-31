@@ -6,25 +6,45 @@ public class PingouinSpawner : MonoBehaviour
     [SerializeField]
     private Transform spawnOrbiter;
 
+    [SerializeField]
+    private float waitBeforeSpawn;
+
+    [SerializeField]
+    private int maxPinguin;
+
     private GameObject pingouinPrefab;
 
 	// Use this for initialization
 	void Start ()
     {
         pingouinPrefab = Resources.Load("pinguin") as GameObject;
-        StartCoroutine(testRot());
+        StartCoroutine(initLevel());
     }
 
-    private IEnumerator testRot()
+    private void spawnPinguin(bool isTerrorist = false)
     {
-        while(true)
+        StartCoroutine(spawnCoroutine(isTerrorist));
+    }
+
+    private IEnumerator spawnCoroutine(bool isTerrorist)
+    {
+        yield return new WaitForSeconds(waitBeforeSpawn);
+        pickSpawnPosition(isTerrorist);
+    }
+
+    private IEnumerator initLevel()
+    {
+        int count = 0;
+        while(maxPinguin - count > 0)
         {
-            yield return new WaitForSeconds(1);
-            pickSpawnPosition();
+            float delay = Random.Range(0.1f, 0.5f);
+            yield return new WaitForSeconds(delay);
+            pickSpawnPosition(false);
+            count++;
         }
     }
 
-    public void createPrefabAtPosition(Vector3 position)
+    public void createPrefabAtPosition(Vector3 position, bool isTerrorist)
     { 
         Instantiate(pingouinPrefab, position, Quaternion.identity);
     }
@@ -34,10 +54,10 @@ public class PingouinSpawner : MonoBehaviour
 	
 	}
 
-    void pickSpawnPosition()
+    void pickSpawnPosition(bool isTerrorist)
     {
         float randRot = Random.Range(0, 360);
         transform.Rotate(new Vector3(0, randRot, 0));
-        createPrefabAtPosition(spawnOrbiter.position);
+        createPrefabAtPosition(spawnOrbiter.position, isTerrorist);
     }
 }
