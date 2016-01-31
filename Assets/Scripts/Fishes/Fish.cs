@@ -18,12 +18,6 @@ public class Fish : MonoBehaviour {
 
         set
         {
-            if (value)
-            {
-                prefab = Resources.Load("Explosion") as GameObject;
-                explosion =  Instantiate(prefab) as GameObject;
-                explosion.transform.SetParent(transform);
-            }
             isDangerous = value;
         }
     }
@@ -51,7 +45,10 @@ public class Fish : MonoBehaviour {
 
     private void explose()
     {
-        explosion.GetComponent<ParticleSystem>().Play();
+        prefab = Resources.Load("Explosion") as GameObject;
+        explosion = Instantiate(prefab) as GameObject;
+        explosion.GetComponent<ParticleSystem>().Stop();
+        explosion.transform.SetParent(transform, true);
     }
 
     void OnCollisionEnter(Collision collision)
