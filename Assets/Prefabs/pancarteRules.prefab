@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 426108}
   - 95: {fileID: 9583550}
+  - 114: {fileID: 11410534}
   m_Layer: 0
   m_Name: pancarteRules
-  m_TagString: Untagged
+  m_TagString: RulePanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +45,7 @@ GameObject:
   - 33: {fileID: 3379724}
   - 64: {fileID: 6466912}
   - 23: {fileID: 2347108}
+  - 114: {fileID: 11444306}
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
@@ -87,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109766}
   m_LocalRotation: {x: -0.0870877, y: 0.029215926, z: -0.9949559, w: 0.040311385}
-  m_LocalPosition: {x: 20.491, y: 5.3545, z: -0.61181}
+  m_LocalPosition: {x: 20.491, y: 8.52, z: -0.61181}
   m_LocalScale: {x: 0.7616601, y: 0.9050316, z: 0.9722369}
   m_Children:
   - {fileID: 476368}
@@ -239,7 +241,7 @@ Animator:
   m_GameObject: {fileID: 109766}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 45d084834c361e44f9345e0db68a909d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 51eaf0e0b717d5745ac03d3781a865fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a5e34135bdfd19459b8c702f4b1b2a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -247,6 +249,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11410534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a0500378e7bf4691ad6e913593dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11444306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 661f1dc41c8abdd4ea2014b7023aa3b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Vincent
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -10,10 +10,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
   - enabled: 1
-    path: Assets/Scenes/Yohan 2.unity
+    path: Assets/Scenes/Menu main.unity
   - enabled: 1
     path: Assets/Scenes/jeu.unity
   - enabled: 1
     path: Assets/Scenes/Victory.unity
   - enabled: 1
     path: Assets/Scenes/Defeat.unity
+  - enabled: 1
+    path: Assets/Scenes/Vincent.unity

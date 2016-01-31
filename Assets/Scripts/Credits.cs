@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
-public class Credits : MonoBehaviour {
+public class Credits : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject button;
 
     public float f_speed = 0f;
 
@@ -32,5 +36,14 @@ public class Credits : MonoBehaviour {
     public void resetCredits()
     {
         transform.position = v3_posInit;
+    }
+
+    public void hideself()
+    {
+        button.SetActive(false);
+        gameObject.SetActive(false);
+        showCredits(false);
+        resetCredits();
+        Camera.main.gameObject.GetComponent<BlurOptimized>().enabled = false;
     }
 }

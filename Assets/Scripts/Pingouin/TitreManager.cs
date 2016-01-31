@@ -13,7 +13,7 @@ public class TitreManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            SceneManager.LoadSceneAsync("Yohan 2");
+            SceneManager.LoadSceneAsync("Menu main");
         }
 	}
 }
