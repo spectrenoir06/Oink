@@ -134,4 +134,9 @@ public class PingouinAIState : NPCAIState
     {
         navigation.setSpeed(f);
     }
+
+    public void spawnOnDive()
+    {
+        controller.spawnOnDive();
+    }
 }
