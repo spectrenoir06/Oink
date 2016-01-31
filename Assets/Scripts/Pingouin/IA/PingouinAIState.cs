@@ -5,7 +5,7 @@ public class PingouinAIState : NPCAIState
 {
     PingouinNavigation navigation;
 
-    public int fishEaten = 0;
+    private int fishEaten = 0;
 
     public PingouinAIState(NPCAIController controller, Transform transform, LuaEnvironnement luaEnvironnement, TextAsset script):
         base(controller, transform, luaEnvironnement, script)
@@ -13,14 +13,23 @@ public class PingouinAIState : NPCAIState
         navigation = transform.GetComponent<PingouinNavigation>();
     }
 
+    public int getFishCount()
+    {
+        return fishEaten;
+    }
+
+    public void incrementFishCount()
+    {
+        fishEaten++;
+    }
+
     public void goToClosestFish()
     {
         Vector3 goal = FishManager.Instance.getClosestFishPosition(transform.position);
         navigation.setGoalPosition(goal);
-        navigation.setWalkingState(true);
 		float dist = Vector3.Distance(goal, transform.position);
 		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
-		if (tmp != null && dist < 3)
+		if (tmp != null && dist < 1)
 		{
             onFindFish(tmp);
         }

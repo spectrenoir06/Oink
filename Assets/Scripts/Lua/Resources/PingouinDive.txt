@@ -3,5 +3,9 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
-	Debug.Log("POUET");
+	npc:startWalking();
+end
+
+function onBorderBanquise(npc)
+	npc:playAnimation("dive");
 end

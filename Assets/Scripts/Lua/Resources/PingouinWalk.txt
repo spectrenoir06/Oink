@@ -22,9 +22,5 @@ function seekFish(npc)
 end
 
 function onBorderBanquise(npc)
-	if npc.fishEaten <= 3 then
-		npc:turnAround();
-	else
-		npc:playAnimation("dive");
-	end
+	npc:turnAround();
 end

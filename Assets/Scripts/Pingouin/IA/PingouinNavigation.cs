@@ -32,6 +32,8 @@ public class PingouinNavigation : MonoBehaviour
     public void setWalkingState(bool isWalking)
     {
         walking = isWalking;
+        if (!walking)
+            mRigidbody.velocity = Vector3.zero;
     }
 
     public void jump()
