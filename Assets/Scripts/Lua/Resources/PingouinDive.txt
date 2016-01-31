@@ -1,0 +1,17 @@
+﻿import 'System'
+import 'UnityEngine'
+import 'Assembly-CSharp'
+
+function enter(npc)
+	npc:startWalking();
+end
+
+function onBorderBanquise(npc)
+	npc:stopWalking();
+	npc:playAnimation("dance&dive");
+end
+
+function onAnimEnd(npc)
+	npc:setSpeed(4);
+	npc:startWalking();
+end

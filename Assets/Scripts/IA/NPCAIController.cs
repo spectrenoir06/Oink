@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class NPCAIController : MonoBehaviour
 {
@@ -87,12 +88,17 @@ public class NPCAIController : MonoBehaviour
             animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Eat);
         else if(name == "dance&dive")
             animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
-        else if (name == "eat")
+        else if (name == "dive")
             animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
     }
 
     public void onBorderBanquise()
     {
         (stateMachine.CurrentState as PingouinAIState).onBorderBanquise();
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }

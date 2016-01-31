@@ -6,12 +6,12 @@ Fish = nil
 foundFish = false;
 
 function enter(npc)
-
+	npc:findMyFish();
 end
 
 function update(npc)
 	if not foundFish then
-		npc:goToClosestFish();
+		npc:goToMyFish();
 	end
 end
 
@@ -19,21 +19,23 @@ function onFindFish(npc, fish)
 	foundFish = true;
 	Fish = fish;
 	npc:playAnimation("dance&eat");
+	npc:stopWalking();
 end
 
 function onAnimEnd(npc)
 	if foundFish then
-		Fish:eat();
-		npc.fishEaten = npc.fishEaten + 1;
+		Fish:eat(npc);
+		npc:incrementFishCount();
 	end
-	npc:changeState("PingouinWalk");
-	npc:randomizeDirection();
+	
+	if npc:getFishCount() <= 0 then
+		npc:changeState("PingouinWalk");
+	end
+	if npc:getFishCount() > 0 then
+		npc:changeState("PingouinDive");
+	end
 end
 
 function onBorderBanquise(npc)
-	if npc.fishEaten <= 3 then
-		npc:turnAround();
-	else
-		npc:playAnimation("dive");
-	end
+	npc:turnAround();
 end

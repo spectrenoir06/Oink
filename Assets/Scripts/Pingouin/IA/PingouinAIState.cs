@@ -4,8 +4,9 @@ using System.Collections;
 public class PingouinAIState : NPCAIState
 {
     PingouinNavigation navigation;
+    Fish fish;
 
-    public int fishEaten = 0;
+    private int fishEaten = 0;
 
     public PingouinAIState(NPCAIController controller, Transform transform, LuaEnvironnement luaEnvironnement, TextAsset script):
         base(controller, transform, luaEnvironnement, script)
@@ -13,16 +14,24 @@ public class PingouinAIState : NPCAIState
         navigation = transform.GetComponent<PingouinNavigation>();
     }
 
-    public void goToClosestFish()
+    public int getFishCount()
     {
-        Vector3 goal = FishManager.Instance.getClosestFishPosition(transform.position);
+        return fishEaten;
+    }
+
+    public void incrementFishCount()
+    {
+        fishEaten++;
+    }
+
+    public void goToMyFish()
+    {
+        Vector3 goal = fish.transform.position;
         navigation.setGoalPosition(goal);
-        navigation.setWalkingState(true);
 		float dist = Vector3.Distance(goal, transform.position);
-		Fish tmp = FishManager.Instance.getClosestFish(transform.position);
-		if (tmp != null && dist < 3)
+		if (dist < 1)
 		{
-            onFindFish(tmp);
+            onFindFish(fish);
         }
     }
 
@@ -99,6 +108,16 @@ public class PingouinAIState : NPCAIState
         controller.playAnimation(name);
     }
 
+    public void findMyFish()
+    {
+        fish = FishManager.Instance.getClosestFish(transform.position);
+    }
+
+    public void die()
+    {
+        controller.die();
+    }
+
     public void onBorderBanquise()
     {
         lua.call("onBorderBanquise", this);
@@ -107,5 +126,10 @@ public class PingouinAIState : NPCAIState
     public void randomizeDirection()
     {
         navigation.randomizeDirection();
+    }
+    
+    public void setSpeed(float f)
+    {
+        navigation.setSpeed(f);
     }
 }

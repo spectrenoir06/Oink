@@ -28,6 +28,11 @@ public class PinguinAnimator : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private GameObject ploufPrefab;
+
+    private GameObject ploufParticles;
+
     private StateAnimationPinguin currentState;
 
     // Use this for initialization
@@ -43,8 +48,6 @@ public class PinguinAnimator : MonoBehaviour
 
     public void playAnimation(newStateAnimationPinguin state)
     {
-        if (currentState != StateAnimationPinguin.Walk)
-            return;
         switch (state)
         {
             case newStateAnimationPinguin.Throw:
@@ -72,10 +75,12 @@ public class PinguinAnimator : MonoBehaviour
         }
     }
 
-    public void Destroy()
+    public void Dive()
     {
+        plouf();
         Destroy(transform.parent.gameObject);
     }
+
 
     public void OnStartWalk()
     {
@@ -84,5 +89,12 @@ public class PinguinAnimator : MonoBehaviour
             iaController.startWalking();
             currentState = StateAnimationPinguin.Walk;
         }
+    }
+
+    private void plouf()
+    {
+        ploufParticles = Instantiate(ploufPrefab) as GameObject;
+        ploufParticles.transform.position = transform.position;
+        ploufParticles.GetComponent<ParticleSystem>().Play();
     }
 }
