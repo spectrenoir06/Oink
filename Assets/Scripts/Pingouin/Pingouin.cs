@@ -30,7 +30,7 @@ public class Pingouin : MonoBehaviour
 		throwFish();
     }
 
-    void throwFish()
+    public void throwFish()
     {
         animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Throw);
         FishManager.Instance.createPrefabAtPosition(transform.position);

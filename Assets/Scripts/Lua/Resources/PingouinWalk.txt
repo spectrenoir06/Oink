@@ -3,9 +3,20 @@ import 'UnityEngine'
 import 'Assembly-CSharp'
 
 function enter(npc)
-	npc:startWalking()
+	npc:startWalking();
+	rand = Random.Range(1,5); 
+	npc:wait(rand, "throwFish");
 end
 
 function update(npc)
+	
+end
 
+function throwFish(npc)
+	npc:throwFish();
+	npc:wait(3, "throwFish");
+end
+
+function seekFish(npc)
+	npc:changeState("PingouiFindFish");
 end
