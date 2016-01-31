@@ -44,7 +44,12 @@ public class PingouinNavigation : MonoBehaviour
 
     private void goForward(float fspeed)
     {
-        mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * speed);
+        mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * fspeed);
+    }
+
+    public void setSpeed(float f)
+    {
+        speed = f;
     }
 
     public void turnAround(float degree)
