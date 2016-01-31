@@ -24,7 +24,7 @@ end
 
 function onAnimEnd(npc)
 	if foundFish then
-		Fish:eat();
+		Fish:eat(npc);
 		npc:incrementFishCount();
 	end
 	
