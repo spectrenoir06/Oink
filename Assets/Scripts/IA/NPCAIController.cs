@@ -77,4 +77,9 @@ public class NPCAIController : MonoBehaviour
 
   }
 
+    public void onBorderBanquise()
+    {
+        Debug.Log("Border POUET");
+    }
+
 }

@@ -756,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navigation: {fileID: 11403904}
   animator: {fileID: 11458874}
+  iaController: {fileID: 11424090}
   marker: {fileID: 165008}
 --- !u!136 &13628980
 CapsuleCollider:
