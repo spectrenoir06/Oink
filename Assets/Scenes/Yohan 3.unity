@@ -1099,6 +1099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 509352836}
+  ploufPrefab: {fileID: 0}
 --- !u!95 &509352836
 Animator:
   serializedVersion: 3
@@ -3137,6 +3138,98 @@ Transform:
   - {fileID: 1735974115}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &918741301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 180148, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 918741302}
+  - 33: {fileID: 918741306}
+  - 64: {fileID: 918741305}
+  - 23: {fileID: 918741304}
+  - 114: {fileID: 918741303}
+  m_Layer: 0
+  m_Name: QuitButtonPlane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918741302
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 497418, guid: 5d55f455316881b4ba66cf1e81b031c8, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918741301}
+  m_LocalRotation: {x: 0.041618288, y: 0.6741647, z: -0.73696053, w: -0.025674041}
+  m_LocalPosition: {x: 0.28, y: 0.53, z: -0.14}
+  m_LocalScale: {x: 0.27593023, y: 0.27593037, z: 0.27593043}
+  m_Children: []
+  m_Father: {fileID: 1466384564}
+  m_RootOrder: 2
+--- !u!114 &918741303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11488462, guid: 5d55f455316881b4ba66cf1e81b031c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918741301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9469c37b36587341b3ac5e72cd778cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+--- !u!23 &918741304
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300152, guid: 5d55f455316881b4ba66cf1e81b031c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918741301}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 1a1ea145c937fab4d89a348883fcaaf5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &918741305
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6457820, guid: 5d55f455316881b4ba66cf1e81b031c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918741301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &918741306
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300830, guid: 5d55f455316881b4ba66cf1e81b031c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918741301}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &918880798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,6 +3641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1153682015}
+  ploufPrefab: {fileID: 0}
 --- !u!95 &1153682015
 Animator:
   serializedVersion: 3
@@ -4231,9 +4325,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 45d084834c361e44f9345e0db68a909d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 130f302da2428a146a98b54a31fec399, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45d084834c361e44f9345e0db68a909d, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &1466384564 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 45d084834c361e44f9345e0db68a909d, type: 3}
+  m_PrefabInternal: {fileID: 1466384563}
 --- !u!1 &1478753548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,7 +4650,7 @@ Transform:
   m_Children:
   - {fileID: 1889798744}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1612661119
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,6 +5259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 1889798746}
+  ploufPrefab: {fileID: 0}
 --- !u!95 &1889798746
 Animator:
   serializedVersion: 3
@@ -5358,6 +5461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iaController: {fileID: 11424090, guid: b1b92113d7948f44baa5444fed87e517, type: 2}
   animator: {fileID: 2112869069}
+  ploufPrefab: {fileID: 0}
 --- !u!95 &2112869069
 Animator:
   serializedVersion: 3
