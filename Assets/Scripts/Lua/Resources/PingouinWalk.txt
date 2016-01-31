@@ -20,3 +20,11 @@ end
 function seekFish(npc)
 	npc:changeState("PingouinFindFish");
 end
+
+function onBorderBanquise(npc)
+	if npc.fishEaten <= 3 then
+		npc:turnAround();
+	else
+		npc:playAnimation("dive");
+	end
+end

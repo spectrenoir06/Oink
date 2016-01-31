@@ -45,6 +45,22 @@ public class PingouinNavigation : MonoBehaviour
         mRigidbody.velocity = new Vector3(transform.forward.x * speed, mRigidbody.velocity.y, transform.forward.z * speed * speed);
     }
 
+    public void turnAround(float degree)
+    {
+        transform.RotateAround(transform.position, transform.up, degree);
+    }
+
+    public void turnAround()
+    {
+        turnAround(180);
+    }
+
+    public void randomizeDirection()
+    {
+        float randAngle = Random.Range(10, 360);
+        turnAround(randAngle);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Banquise")

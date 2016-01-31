@@ -83,9 +83,16 @@ public class NPCAIController : MonoBehaviour
     {
         if (name == "dance&eat")
             animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenEat);
+        else if (name == "eat")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Eat);
+        else if(name == "dance&dive")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.DanceThenDive);
+        else if (name == "eat")
+            animator.playAnimation(PinguinAnimator.newStateAnimationPinguin.Dive);
     }
+
     public void onBorderBanquise()
     {
-
+        (stateMachine.CurrentState as PingouinAIState).onBorderBanquise();
     }
 }

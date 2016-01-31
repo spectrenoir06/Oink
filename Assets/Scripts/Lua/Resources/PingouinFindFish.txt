@@ -24,6 +24,16 @@ end
 function onAnimEnd(npc)
 	if foundFish then
 		Fish:eat();
+		npc.fishEaten = npc.fishEaten + 1;
 	end
 	npc:changeState("PingouinWalk");
+	npc:randomizeDirection();
+end
+
+function onBorderBanquise(npc)
+	if npc.fishEaten <= 3 then
+		npc:turnAround();
+	else
+		npc:playAnimation("dive");
+	end
 end
