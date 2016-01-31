@@ -41,12 +41,14 @@ public class Button : MonoBehaviour {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         hits = Physics.RaycastAll(ray, 100);
         bool b_touchButton = false;
+        bool b_inButton = false;
         for (int i = 0; i < hits.Length; ++i)
         {
             if (hits[i].transform == gameObject.transform)
             {
                 animator.SetBool("in", true);
- 
+                b_inButton = true;
+
                 switch (buttonType)
                 {
                     case Enum_ButtonType.PlayGame:
@@ -62,6 +64,7 @@ public class Button : MonoBehaviour {
                     case Enum_ButtonType.MenuCredit:
                         if (Input.GetKeyUp(KeyCode.Mouse0) && manager.getAppliStateMachine().CurrentstateKey != Enum_AppliStateKey.MenuCredit)
                         {
+                            b_touchButton = true;
                             manager.OnClickCreditButton();
                             audioSource.Play();
                             Debug.Log("Credit button clicked");
@@ -71,6 +74,7 @@ public class Button : MonoBehaviour {
                     case Enum_ButtonType.QuitGame:
                         if (Input.GetKeyUp(KeyCode.Mouse0) && !b_quit)
                         {
+                            b_touchButton = true;
                             manager.OnClickQuitButton();
                             b_quit = true;
                             audioSource.Play();
@@ -89,13 +93,16 @@ public class Button : MonoBehaviour {
                         break;
                 }
             }
-            else
+        }
+
+        if (!b_inButton)
+        {
+            animator.SetBool("in", false);
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                if (Input.GetKeyUp(KeyCode.Mouse0))
-                {
-                    //just for test 
-                    //SceneManager.LoadSceneAsync("Yohan");
-                }
+                //just for test 
+                //SceneManager.LoadSceneAsync("Yohan");
             }
         }
 
