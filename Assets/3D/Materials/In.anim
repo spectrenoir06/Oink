@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: fadeIn
+  m_Name: In
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -80,14 +80,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -1
-        outSlope: -1
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
         value: 0
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -97,19 +97,13 @@ AnimationClip:
     classID: 23
     script: {fileID: 0}
   m_PPtrCurves: []
-  m_SampleRate: 30
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
-      attribute: 2108656497
-      script: {fileID: 0}
-      classID: 23
-      customType: 22
-      isPPtrCurve: 0
     - path: 0
       attribute: 1303350129
       script: {fileID: 0}
@@ -124,6 +118,12 @@ AnimationClip:
       isPPtrCurve: 0
     - path: 0
       attribute: 1840221041
+      script: {fileID: 0}
+      classID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 2108656497
       script: {fileID: 0}
       classID: 23
       customType: 22
@@ -214,14 +214,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -1
-        outSlope: -1
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
         value: 0
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2

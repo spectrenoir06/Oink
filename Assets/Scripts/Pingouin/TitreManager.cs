@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class TitreManager : MonoBehaviour {
 
+    [SerializeField]
+    private Animator animator;
 	// Use this for initialization
 	void Start () {
 	
@@ -11,9 +13,16 @@ public class TitreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadSceneAsync("Menu main");
+            StartCoroutine(waitFadeOut());
         }
 	}
+
+    public IEnumerator waitFadeOut()
+    {
+        animator.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadSceneAsync("Menu main");
+    }
 }
